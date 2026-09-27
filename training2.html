@@ -1,0 +1,2052 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CutleryHub | TEVTA Wazirabad Training</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="../cutlery-portal/assets/css/styling.css"
+    >
+
+    <!-- Responsive CSS -->
+    <link
+        rel="stylesheet"
+        href="../cutlery-portal/assets/css/reponsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">⚔</span>
+
+            <span class="logo-name">
+                Cutlery<span>Hub</span>
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    Categories
+                </a>
+            </li>
+
+            <li>
+                <a href="manufacturers.html">
+                    Manufacturers
+                </a>
+            </li>
+
+            <li>
+                <a href="machinery.html">
+                    Machinery
+                </a>
+            </li>
+
+            <li>
+                <a href="manufacturing.html">
+                    Process
+                </a>
+            </li>
+
+            <li>
+                <a href="training2.html" class="active">
+                    Training
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- RIGHT NAVIGATION -->
+        <div class="nav-actions">
+
+            <!-- Search -->
+            <button
+                class="search-btn"
+                onclick="openSearch()"
+                aria-label="Search"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+
+            <!-- Login -->
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+
+            <!-- Register -->
+            <a href="register.html" class="register-btn">
+                Register
+            </a>
+
+
+            <!-- Mobile Menu -->
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open Menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     SEARCH OVERLAY
+===================================================== -->
+
+<div class="search-overlay" id="searchOverlay">
+
+    <div class="search-box">
+
+        <button
+            class="close-search"
+            onclick="closeSearch()"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <h2>
+            Search CutleryHub
+        </h2>
+
+        <p>
+            Search products, manufacturers, machinery and more.
+        </p>
+
+        <div class="search-input">
+
+            <input
+                type="text"
+                id="globalSearch"
+                placeholder="Search here..."
+            >
+
+            <button onclick="performSearch()">
+                <i class="fa-solid fa-search"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     SCROLL PROGRESS
+========================================================= -->
+
+<div id="scrollProgress"></div>
+
+
+<!-- =========================================================
+     HERO SECTION
+========================================================= -->
+
+<section class="tevta-hero">
+
+    <div class="hero-dark-overlay"></div>
+
+    <div class="container hero-container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- HERO CONTENT -->
+
+            <div class="col-lg-7">
+
+                <div class="hero-small-label">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    TEVTA • WAZIRABAD
+
+                </div>
+
+
+                <h1>
+
+                    Technical Training
+
+                    <span>
+                        in Wazirabad
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Explore technical and vocational skills connected
+                    with the Cutlery & Small Tools Industries Service
+                    Centre Wazirabad. Learn about practical training,
+                    workshops, machinery, safety and industrial skill
+                    development.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#training-programs"
+                        class="gold-button"
+                    >
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        Explore Training
+
+                    </a>
+
+
+                    <a
+                        href="#tevta-gallery"
+                        class="transparent-button"
+                    >
+
+                        <i class="fa-solid fa-images"></i>
+
+                        View Gallery
+
+                    </a>
+
+                </div>
+
+
+                <div class="hero-mini-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-school"></i>
+
+                        <span>
+                            Technical Education
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        <span>
+                            Practical Skills
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-industry"></i>
+
+                        <span>
+                            Industrial Connection
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO IMAGE -->
+
+            <div class="col-lg-5">
+
+                <div class="hero-photo-card">
+
+                    <div class="photo-number">
+                        TEVTA
+                    </div>
+
+
+                    <!-- IMAGE LINK -->
+                    <img
+                        src="images/image5.jpg"
+                        alt="Technical Education and Training Centre"
+                    >
+
+
+                    <div class="photo-information">
+
+                        <div class="photo-location-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Cutlery & Small Tools Industries
+                            </strong>
+
+                            <span>
+                                Service Centre Wazirabad
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUICK STATS
+========================================================= -->
+
+<section class="quick-stats">
+
+    <div class="container">
+
+        <div class="stats-box">
+
+            <div class="stat-item">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div>
+
+                    <strong class="counter" data-target="01">
+                        50
+                    </strong>
+
+                    <span>
+                        Training Centre
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-item">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+
+                <div>
+
+                    <strong class="counter" data-target="04">
+                        15
+                    </strong>
+
+                    <span>
+                        Core Skill Areas
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-item">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-industry"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        20
+                    </strong>
+
+                    <span>
+                        Industry Connection
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-item">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        100%
+                    </strong>
+
+                    <span>
+                        Safety Awareness
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT TEVTA
+========================================================= -->
+
+<section
+    class="tevta-about section-padding"
+    id="about-tevta"
+>
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <!-- IMAGE -->
+
+            <div class="col-lg-6">
+
+                <div class="about-photo-wrapper">
+
+
+                    <!-- IMAGE LINK -->
+                    <img
+                        src="images/image3.jpg"
+                        alt="Technical Training Workshop"
+                    >
+
+
+                    <div class="about-photo-tag">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        <div>
+
+                            <strong>
+                                Wazirabad Service Centre
+                            </strong>
+
+                            <span>
+                                Cutlery & Small Tools Industries
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="col-lg-6">
+
+                <span class="section-label">
+
+                    <i class="fa-solid fa-school"></i>
+
+                    About TEVTA Training
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Technical Skills for
+
+                    <span>
+                        Practical Industry
+                    </span>
+
+                </h2>
+
+
+                <p class="section-text">
+
+                    Technical and vocational education focuses on
+                    practical knowledge and skills that can help
+                    learners understand tools, machinery, materials,
+                    workshop procedures and industrial safety.
+
+                </p>
+
+
+                <p class="section-text">
+
+                    The Cutlery & Small Tools Industries Service Centre
+                    in Wazirabad provides an important local connection
+                    between technical skills and the area's manufacturing
+                    environment.
+
+                </p>
+
+
+                <div class="about-points">
+
+
+                    <div class="about-point">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Technical Learning
+                            </strong>
+
+                            <p>
+                                Understanding basic industrial
+                                concepts and processes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Practical Workshop
+                            </strong>
+
+                            <p>
+                                Learning through practical
+                                workshop activities.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Industrial Awareness
+                            </strong>
+
+                            <p>
+                                Understanding manufacturing
+                                environments and workplace practices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Safety Awareness
+                            </strong>
+
+                            <p>
+                                Learning safe handling of tools,
+                                equipment and workshop areas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRAINING PROGRAMS
+========================================================= -->
+
+<section
+    class="training-programs section-padding"
+    id="training-programs"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading text-center">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Training Areas
+
+            </span>
+
+
+            <h2 class="section-title">
+
+                Learn Skills for
+
+                <span>
+                    Industrial Work
+                </span>
+
+            </h2>
+
+
+            <p class="section-text">
+
+                The following areas show practical skills relevant
+                to technical and manufacturing environments.
+                Exact course names, schedules and admissions should
+                be confirmed with the relevant TEVTA institute.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+
+            <!-- CARD 1 -->
+
+            <div class="col-lg-6">
+
+                <div class="training-card">
+
+                    <div class="training-card-top">
+
+                        <div class="training-icon">
+
+                            <i class="fa-solid fa-gears"></i>
+
+                        </div>
+
+                        <span class="training-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Machine Operation
+                    </h3>
+
+
+                    <p>
+
+                        Learners can develop basic awareness of
+                        industrial machines, machine components,
+                        controls, operating procedures and safe
+                        working practices.
+
+                    </p>
+
+
+                    <div class="skill-list">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Machine Components
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Machine Controls
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Safe Operation
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-footer-info">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        Practical technical awareness
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="col-lg-6">
+
+                <div class="training-card">
+
+                    <div class="training-card-top">
+
+                        <div class="training-icon">
+
+                            <i class="fa-solid fa-industry"></i>
+
+                        </div>
+
+                        <span class="training-number">
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Metal & Manufacturing Skills
+                    </h3>
+
+
+                    <p>
+
+                        Learners can understand basic manufacturing
+                        operations including material preparation,
+                        cutting, shaping, grinding and finishing.
+
+                    </p>
+
+
+                    <div class="skill-list">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Material Handling
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Cutting & Shaping
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Finishing
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-footer-info">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        Manufacturing fundamentals
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="col-lg-6">
+
+                <div class="training-card">
+
+                    <div class="training-card-top">
+
+                        <div class="training-icon">
+
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        </div>
+
+                        <span class="training-number">
+                            03
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Workshop Practice
+                    </h3>
+
+
+                    <p>
+
+                        Workshop practice helps learners understand
+                        common tools, measuring equipment, materials
+                        and practical task procedures.
+
+                    </p>
+
+
+                    <div class="skill-list">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Hand Tools
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Measuring Tools
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Practical Tasks
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-footer-info">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        Hands-on workshop learning
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+
+            <div class="col-lg-6">
+
+                <div class="training-card">
+
+                    <div class="training-card-top">
+
+                        <div class="training-icon">
+
+                            <i class="fa-solid fa-screwdriver"></i>
+
+                        </div>
+
+                        <span class="training-number">
+                            04
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Maintenance & Safety
+                    </h3>
+
+
+                    <p>
+
+                        Learners can develop awareness of inspection,
+                        cleaning, basic maintenance, safe equipment
+                        handling and workplace safety.
+
+                    </p>
+
+
+                    <div class="skill-list">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Inspection
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Cleaning
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Safety Procedures
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-footer-info">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        Safe workplace practices
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRACTICAL TRAINING
+========================================================= -->
+
+<section class="practical-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-6">
+
+                <span class="section-label light-label">
+
+                    <i class="fa-solid fa-hammer"></i>
+
+                    Practical Training
+
+                </span>
+
+
+                <h2 class="dark-section-title">
+
+                    From Classroom
+
+                    <span>
+                        to Workshop
+                    </span>
+
+                </h2>
+
+
+                <p class="dark-section-text">
+
+                    Technical training becomes more meaningful when
+                    learners understand how theoretical concepts are
+                    applied in practical workshop environments.
+
+                </p>
+
+
+                <div class="practical-features">
+
+
+                    <div class="practical-feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-1"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Understand
+                            </h4>
+
+                            <p>
+                                Learn the basic theory behind tools,
+                                machines and manufacturing processes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="practical-feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-2"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Practice
+                            </h4>
+
+                            <p>
+                                Apply knowledge through supervised
+                                workshop activities.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="practical-feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-3"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Improve
+                            </h4>
+
+                            <p>
+                                Develop accuracy, safety awareness
+                                and technical confidence.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="skill-flow">
+
+                    <div class="flow-title">
+
+                        <i class="fa-solid fa-route"></i>
+
+                        Training Journey
+
+                    </div>
+
+
+                    <div class="flow-item">
+
+                        <span>01</span>
+
+                        <strong>
+                            Admission / Enrollment
+                        </strong>
+
+                    </div>
+
+
+                    <div class="flow-line"></div>
+
+
+                    <div class="flow-item">
+
+                        <span>02</span>
+
+                        <strong>
+                            Technical Learning
+                        </strong>
+
+                    </div>
+
+
+                    <div class="flow-line"></div>
+
+
+                    <div class="flow-item">
+
+                        <span>03</span>
+
+                        <strong>
+                            Workshop Practice
+                        </strong>
+
+                    </div>
+
+
+                    <div class="flow-line"></div>
+
+
+                    <div class="flow-item">
+
+                        <span>04</span>
+
+                        <strong>
+                            Skill Development
+                        </strong>
+
+                    </div>
+
+
+                    <div class="flow-line"></div>
+
+
+                    <div class="flow-item">
+
+                        <span>05</span>
+
+                        <strong>
+                            Industrial Awareness
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INDUSTRY CONNECTION
+========================================================= -->
+
+<section class="industry-connection section-padding">
+
+    <div class="container">
+
+        <div class="row g-5 align-items-center">
+
+
+            <div class="col-lg-7">
+
+                <span class="section-label">
+
+                    <i class="fa-solid fa-link"></i>
+
+                    Wazirabad Industry Connection
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    TEVTA Training &
+
+                    <span>
+                        Cutlery Industry
+                    </span>
+
+                </h2>
+
+
+                <p class="section-text">
+
+                    Wazirabad is strongly associated with cutlery
+                    and metalworking. Technical skills such as
+                    machine awareness, metal handling, grinding,
+                    polishing, finishing and workplace safety are
+                    relevant to manufacturing environments.
+
+                </p>
+
+
+                <p class="section-text">
+
+                    This creates a natural connection between
+                    technical education and the skills used in
+                    local industrial workplaces.
+
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <div class="industry-process">
+
+
+                    <div class="industry-step">
+
+                        <div class="step-icon">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Technical Education
+                            </strong>
+
+                            <small>
+                                Learn concepts and skills
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="process-arrow">
+
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                    </div>
+
+
+                    <div class="industry-step">
+
+                        <div class="step-icon">
+
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Practical Workshop
+                            </strong>
+
+                            <small>
+                                Apply technical knowledge
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="process-arrow">
+
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                    </div>
+
+
+                    <div class="industry-step">
+
+                        <div class="step-icon">
+
+                            <i class="fa-solid fa-industry"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Manufacturing
+                            </strong>
+
+                            <small>
+                                Understand industrial work
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SAFETY
+========================================================= -->
+
+<section class="safety-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Workshop Safety
+
+            </span>
+
+
+            <h2 class="section-title">
+
+                Safety is Part of
+
+                <span>
+                    Technical Training
+                </span>
+
+            </h2>
+
+
+            <p class="section-text">
+
+                Safe working practices are important when learners
+                work around machinery, tools, metal materials and
+                workshop equipment.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+
+            <div class="col-lg-4">
+
+                <div class="safety-card">
+
+                    <div class="safety-icon">
+
+                        <i class="fa-solid fa-helmet-safety"></i>
+
+                    </div>
+
+                    <h3>
+                        Personal Protection
+                    </h3>
+
+                    <p>
+                        Use appropriate protective equipment and
+                        follow workshop safety instructions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="safety-card">
+
+                    <div class="safety-icon">
+
+                        <i class="fa-solid fa-gears"></i>
+
+                    </div>
+
+                    <h3>
+                        Machine Safety
+                    </h3>
+
+                    <p>
+                        Understand machine controls, operating
+                        procedures and safe working distances.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="safety-card">
+
+                    <div class="safety-icon">
+
+                        <i class="fa-solid fa-broom"></i>
+
+                    </div>
+
+                    <h3>
+                        Clean Workshop
+                    </h3>
+
+                    <p>
+                        Keep tools, materials and working areas
+                        organized and free from unnecessary hazards.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TEVTA GALLERY
+========================================================= -->
+
+<section
+    class="tevta-gallery section-padding"
+    id="tevta-gallery"
+>
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-camera"></i>
+
+                TEVTA Wazirabad
+
+            </span>
+
+
+            <h2 class="section-title">
+
+                Service Centre
+
+                <span>
+                    Gallery
+                </span>
+
+            </h2>
+
+
+            <p class="section-text">
+
+                Technical training and workshop environment
+                connected with TEVTA and industrial skills.
+
+            </p>
+
+        </div>
+
+
+        <div class="gallery-main">
+
+            <div class="gallery-image-wrapper">
+
+
+                <!-- IMAGE LINK -->
+                <img
+                    src="images/image4.jpg"
+                    alt="Technical Training Workshop"
+                >
+
+
+                <div class="gallery-overlay">
+
+                    <div>
+
+                        <span>
+                            TEVTA WAZIRABAD
+                        </span>
+
+                        <h3>
+                            Cutlery & Small Tools Industries
+                            Service Centre
+                        </h3>
+
+                    </div>
+
+
+                    <button
+                        class="gallery-expand"
+                        id="openImage"
+                    >
+
+                        <i class="fa-solid fa-expand"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRAINING BENEFITS
+========================================================= -->
+
+<section class="benefits-section section-padding">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="benefit-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <h3>
+                        Knowledge
+                    </h3>
+
+                    <p>
+                        Develop technical understanding of tools,
+                        materials and processes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="benefit-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <i class="fa-solid fa-hands"></i>
+
+                    <h3>
+                        Practical Skills
+                    </h3>
+
+                    <p>
+                        Connect technical learning with practical
+                        workshop activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="benefit-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                    <h3>
+                        Accuracy
+                    </h3>
+
+                    <p>
+                        Build awareness of careful measurement,
+                        finishing and quality.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="benefit-card">
+
+                    <span>
+                        04
+                    </span>
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <h3>
+                        Safety
+                    </h3>
+
+                    <p>
+                        Understand responsible and safe workshop
+                        practices.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OFFICIAL INFORMATION
+========================================================= -->
+
+<section class="official-section section-padding">
+
+    <div class="container">
+
+        <div class="official-box">
+
+            <div class="official-icon">
+
+                <i class="fa-solid fa-building-columns"></i>
+
+            </div>
+
+
+            <span class="section-label">
+                TEVTA Information
+            </span>
+
+
+            <h2>
+
+                Check Current
+
+                <span>
+                    Training Information
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Course availability, admission dates, eligibility,
+                schedules and other details can change. For current
+                information, check the official TEVTA information
+                or contact the relevant institute.
+
+            </p>
+
+
+            <div class="official-buttons">
+
+
+                <a
+                    href="https://tevta.gop.pk/"
+                    target="_blank"
+                    rel="noopener"
+                    class="official-button"
+                >
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    Official TEVTA Website
+
+                </a>
+
+
+                <a
+                    href="https://www.google.com/search?q=TEVTA+Wazirabad+Cutlery+Small+Tools+Industries+Service+Centre"
+                    target="_blank"
+                    rel="noopener"
+                    class="official-button dark"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Search Service Centre
+
+                </a>
+
+
+                <a
+                    href="https://www.google.com/search?tbm=isch&q=TEVTA+Wazirabad+Cutlery+Small+Tools+Industries"
+                    target="_blank"
+                    rel="noopener"
+                    class="official-button dark"
+                >
+
+                    <i class="fa-solid fa-images"></i>
+
+                    More Images
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="training-cta">
+
+    <div class="container">
+
+        <div class="cta-wrapper">
+
+            <div>
+
+                <span class="cta-label">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    TECHNICAL EDUCATION
+
+                </span>
+
+
+                <h2>
+
+                    Learn Skills.
+
+                    <strong>
+                        Build the Future.
+                    </strong>
+
+                </h2>
+
+
+                <p>
+
+                    Technical training connects knowledge,
+                    practical skills and industrial awareness.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="machinery.html"
+                class="cta-button"
+            >
+
+                Explore Machinery
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     IMAGE MODAL
+========================================================= -->
+
+<div
+    class="image-modal"
+    id="imageModal"
+>
+
+    <button
+        class="close-image"
+        id="closeImage"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <img
+        src="images/image4.jpg"
+        alt="Technical Training Workshop"
+    >
+
+</div>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button id="backToTop">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container-custom">
+
+        <div class="footer-grid">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-about">
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo"
+                >
+
+                    <span class="logo-icon">
+                        ⚔
+                    </span>
+
+                    <span class="logo-name">
+                        Cutlery<span>Hub</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    A digital portal connecting cutlery
+                    products, manufacturers, machinery,
+                    training and industry resources.
+
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="manufacturers.html">
+                    Manufacturers
+                </a>
+
+                <a href="machinery.html">
+                    Machinery
+                </a>
+
+            </div>
+
+
+            <!-- RESOURCES -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Resources
+                </h3>
+
+                <a href="manufacturing.html">
+                    Manufacturing Process
+                </a>
+
+                <a href="training2.html">
+                    Training & TEVTA
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="contact.html">
+                    Customer Inquiry
+                </a>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Account
+                </h3>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+                <a href="dashboards/customer-dashboard.html">
+                    Customer Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 CutleryHub.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- MAIN JAVASCRIPT -->
+
+<script src="../cutlery-portal/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

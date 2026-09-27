@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication - Cutlery Hub Wazirabad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        :root {
+            --primary-black: #111111;
+            --secondary-black: #1a1a1a;
+            --accent-gold: #d4af37;
+            --gold-hover: #b89628;
+            --warm-beige: #e8e2d5;
+            --pure-white: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--primary-black); color: var(--pure-white); display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+
+        .auth-card {
+    position: relative;
+    background: rgba(25, 25, 25, 0.94);
+    border: 1px solid #d4af37;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 440px;
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,0.15),
+        0 20px 60px rgba(0,0,0,0.7);
+
+    backdrop-filter: blur(10px);
+
+    animation: loginCardIn 1s ease forwards;
+}
+
+@keyframes loginCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+        .brand-title { text-align: center; margin-bottom: 15px; }
+        .brand-title h2 { color: var(--accent-gold); font-size: 24px; letter-spacing: 1.5px; }
+        .brand-title p { font-size: 11px; color: var(--warm-beige); margin-top: 2px; }
+
+        .quick-login-section { margin-bottom: 20px; background: #222; padding: 12px; border-radius: 6px; border: 1px solid #333; }
+        .quick-title { font-size: 11px; text-transform: uppercase; color: var(--accent-gold); letter-spacing: 1px; text-align: center; margin-bottom: 8px; font-weight: 600; }
+        .quick-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+        .btn-quick { background-color: #2a2a2a; color: #fff; border: 1px solid #444; padding: 6px; border-radius: 4px; font-size: 11px; cursor: pointer; transition: 0.2s; text-align: center; }
+        .btn-quick:hover { background-color: var(--accent-gold); color: #000; font-weight: 600; }
+
+        .auth-tabs { display: flex; margin-bottom: 20px; border-bottom: 1px solid #333; }
+        .tab-btn { flex: 1; padding: 8px; background: none; border: none; color: var(--warm-beige); font-size: 13px; font-weight: 600; cursor: pointer; text-align: center; }
+        .tab-btn.active { color: var(--accent-gold); border-bottom: 2px solid var(--accent-gold); }
+
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-size: 12px; color: var(--warm-beige); }
+
+        .input-control { width: 100%; padding: 10px; background-color: #222; border: 1px solid #444; border-radius: 5px; color: #fff; font-size: 13px; }
+        .input-control:focus { outline: none; border-color: var(--accent-gold); }
+
+        .btn-gold { width: 100%; padding: 11px; background: linear-gradient(135deg, var(--accent-gold), var(--gold-hover)); color: var(--primary-black); border: none; border-radius: 5px; font-weight: 700; font-size: 14px; cursor: pointer; transition: 0.3s; margin-top: 5px; }
+        .btn-gold:hover { box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); }
+
+        .alert-msg { font-size: 12px; text-align: center; margin-bottom: 12px; display: none; padding: 8px; border-radius: 4px; }
+        .alert-error { background-color: #c0392b; color: #fff; }
+        .alert-success { background-color: #27ae60; color: #fff; }
+
+        
+
+        /* Active Session / Logout Box */
+.logged-user-box {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 440px;
+    background: rgba(25, 25, 25, 0.95);
+    border: 1px solid var(--accent-gold);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.logged-user-box p {
+    font-size: 12px;
+    color: var(--warm-beige);
+    margin-bottom: 5px;
+}
+
+.logged-user-email {
+    color: var(--accent-gold);
+    font-weight: 600;
+    font-size: 13px;
+    display: block;
+    word-break: break-all;
+}
+
+.btn-logout-main {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 18px;
+    background: #c0392b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-logout-main:hover {
+    background: #e74c3c;
+    box-shadow: 0 0 12px rgba(231, 76, 60, 0.4);
+}
+
+
+.animated-bg {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(212,175,55,0.12), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(212,175,55,0.10), transparent 30%),
+        #080808;
+}
+
+.glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(212,175,55,0.08);
+    filter: blur(80px);
+    animation: floatingGlow 8s infinite alternate ease-in-out;
+}
+
+.glow-1 {
+    top: -100px;
+    left: -100px;
+}
+
+.glow-2 {
+    right: -120px;
+    top: 30%;
+    animation-delay: 2s;
+}
+
+.glow-3 {
+    bottom: -150px;
+    left: 35%;
+    animation-delay: 4s;
+}
+
+@keyframes floatingGlow {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+    to {
+        transform: translate(80px, 50px) scale(1.25);
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #d4af37;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #d4af37;
+    animation: particleMove linear infinite;
+}
+
+@keyframes particleMove {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+.login-container {
+    position: relative;
+    background: rgba(25, 25, 25, 0.94);
+    border: 1px solid #d4af37;
+    box-shadow:
+        0 0 25px rgba(212,175,55,0.15),
+        0 20px 60px rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="animated-bg">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+
+    <div id="particles"></div>
+</div>
+
+    <div class="auth-card">
+        <div class="brand-title">
+            <h2>CUTLERY HUB</h2>
+            <p>TEVTA Cutlery & Steel Crafting Portal</p>
+        </div>
+
+        <div class="quick-login-section">
+            <div class="quick-title"><i class="fa-solid fa-bolt"></i> Quick 1-Click Login</div>
+            <div class="quick-buttons">
+                <button type="button" class="btn-quick" data-email="admin@cutleryhub.com" data-pass="admin123">Admin</button>
+                <button type="button" class="btn-quick" data-email="teacher@cutleryhub.com" data-pass="teacher123">Teacher</button>
+                <button type="button" class="btn-quick" data-email="order@cutleryhub.com" data-pass="order123">Order Mgr</button>
+                <button type="button" class="btn-quick" data-email="worker@cutleryhub.com" data-pass="worker123">Worker</button>
+                <button type="button" class="btn-quick" data-email="customer@cutleryhub.com" data-pass="customer123">Customer</button>
+                <button type="button" class="btn-quick" data-email="student@cutleryhub.com" data-pass="student123">Student</button>
+            </div>
+        </div>
+
+        <div class="auth-tabs">
+            <button class="tab-btn active" id="tab-login"><i class="fa-solid fa-lock"></i> Login</button>
+            <button class="tab-btn" id="tab-register"><i class="fa-solid fa-user-plus"></i> Student Register</button>
+        </div>
+
+        <div id="alert-box" class="alert-msg"></div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label><i class="fa-solid fa-envelope"></i> Email Address</label>
+                <input type="email" id="login-email" class="input-control" value="admin@cutleryhub.com" required>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-key"></i> Password</label>
+                <input type="password" id="login-password" class="input-control" value="admin123" required>
+            </div>
+
+            <button type="submit" class="btn-gold"><i class="fa-solid fa-right-to-bracket"></i> Login to Dashboard</button>
+        </form>
+
+        <form id="register-form" style="display: none;">
+            <div class="form-group">
+                <label><i class="fa-solid fa-user"></i> Full Name</label>
+                <input type="text" id="reg-name" class="input-control" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+                <label><i class="fa-solid fa-envelope"></i> Email Address</label>
+                <input type="email" id="reg-email" class="input-control" placeholder="student@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label><i class="fa-solid fa-key"></i> Password</label>
+                <input type="password" id="reg-password" class="input-control" placeholder="Create Password" required>
+            </div>
+            <button type="submit" class="btn-gold"><i class="fa-solid fa-user-check"></i> Register as Student</button>
+        </form>
+    </div>
+
+    <!-- Active User Box with Logout to Main Home -->
+    <div id="logged-user-box" class="logged-user-box">
+        <p><i class="fa-solid fa-circle-check" style="color: #27ae60;"></i> Currently Active Session:</p>
+        <span id="active-email-display" class="logged-user-email">None</span>
+        
+        <!-- CLICKING THIS GOES TO INDEX.HTML (HOME) -->
+        <a href="#" id="main-logout-btn" class="btn-logout-main"><i class="fa-solid fa-house"></i> Logout & Go to Home Page</a>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var defaultAccounts = [
+                { email: "admin@cutleryhub.com", password: "admin123", role: "admin" },
+                { email: "teacher@cutleryhub.com", password: "teacher123", role: "teacher" },
+                { email: "order@cutleryhub.com", password: "order123", role: "order-management" },
+                { email: "worker@cutleryhub.com", password: "worker123", role: "worker" },
+                { email: "customer@cutleryhub.com", password: "customer123", role: "customer" },
+                { email: "student@cutleryhub.com", password: "student123", role: "student" }
+            ];
+
+            function getRegisteredStudents() {
+                return JSON.parse(localStorage.getItem('cutlery_hub_students')) || [];
+            }
+
+            var savedUser = JSON.parse(localStorage.getItem('currentUser'));
+            if(savedUser && savedUser.email) {
+                $('#active-email-display').text(savedUser.email + " (" + savedUser.role.toUpperCase() + ")");
+                $('#logged-user-box').fadeIn();
+            }$('.logout-btn').click(function(e) {
+    e.preventDefault();
+    localStorage.removeItem('currentUser');
+    window.location.href = '../login.html';
+});
+
+
+            // LOGOUT BUTTON ON LOGIN PAGE: CLEAR SESSION & REDIRECT TO MAIN HOME PAGE (index.html)
+            $('#main-logout-btn').click(function(e) {
+                e.preventDefault();
+                localStorage.removeItem('currentUser');
+                window.location.href = 'index.html'; 
+            });
+
+            $('.btn-quick').click(function() {
+                var email = $(this).data('email');
+                var pass = $(this).data('pass');
+                $('#tab-login').click();
+                $('#login-email').val(email);
+                $('#login-password').val(pass);
+                $('#login-form').submit();
+            });
+
+            $('#tab-login').click(function() {
+                $('.tab-btn').removeClass('active');
+                $(this).addClass('active');
+                $('#register-form').hide();
+                $('#login-form').fadeIn();
+                $('#alert-box').hide();
+            });
+
+            $('#tab-register').click(function() {
+                $('.tab-btn').removeClass('active');
+                $(this).addClass('active');
+                $('#login-form').hide();
+                $('#register-form').fadeIn();
+                $('#alert-box').hide();
+            });
+
+            $('#register-form').submit(function(e) {
+                e.preventDefault();
+                var name = $('#reg-name').val().trim();
+                var email = $('#reg-email').val().trim().toLowerCase();
+                var password = $('#reg-password').val().trim();
+
+                var registeredStudents = getRegisteredStudents();
+                if(registeredStudents.find(s => s.email === email)) {
+                    $('#alert-box').removeClass('alert-success').addClass('alert-error').text('Yeh Email pehle se registered hai!').show();
+                    return;
+                }
+
+                registeredStudents.push({ name: name, email: email, password: password, role: "student" });
+                localStorage.setItem('cutlery_hub_students', JSON.stringify(registeredStudents));
+
+                $('#alert-box').removeClass('alert-error').addClass('alert-success').text('Registration Successful! Pre-filling Login...').show();
+                setTimeout(function() {
+                    $('#tab-login').click();
+                    $('#login-email').val(email);
+                    $('#login-password').val(password);
+                }, 1000);
+            });
+
+            $('#login-form').submit(function(e) {
+                e.preventDefault();
+                var email = $('#login-email').val().trim().toLowerCase();
+                var password = $('#login-password').val().trim();
+
+                var registeredStudents = getRegisteredStudents();
+                var allUsers = defaultAccounts.concat(registeredStudents);
+                var userMatch = allUsers.find(u => u.email === email && u.password === password);
+
+                if(!userMatch) {
+                    $('#alert-box').removeClass('alert-success').addClass('alert-error').text('Ghalat Email ya Password!').show();
+                    return;
+                }
+
+                localStorage.setItem('currentUser', JSON.stringify(userMatch));
+
+                var role = userMatch.role;
+                setTimeout(function() {
+                    if(role === 'admin') window.location.href = 'dashboards/adminindex.html';
+                    else if(role === 'teacher') window.location.href = 'dashboards/teacherindex.html';
+                    else if(role === 'student') window.location.href = 'dashboards/studentindex.html';
+                    else if(role === 'order-management') window.location.href = 'dashboards/order-managementindex.html';
+                    else if(role === 'worker') window.location.href = 'dashboards/workerindex.html';
+                    else if(role === 'customer') window.location.href = 'dashboards/customerindex.html';
+                }, 500);
+            });
+        });
+        $('#main-logout-btn').click(function(e) {
+    e.preventDefault();
+
+    localStorage.removeItem('currentUser');
+
+    window.location.href = 'index.html';
+});
+
+        $(document).ready(function () {
+
+    // Create gold particles
+    for (let i = 0; i < 45; i++) {
+
+        let particle = $('<span class="particle"></span>');
+
+        particle.css({
+            left: Math.random() * 100 + '%',
+            animationDuration: (5 + Math.random() * 8) + 's',
+            animationDelay: (Math.random() * 8) + 's',
+            opacity: Math.random()
+        });
+
+        $('#particles').append(particle);
+    }
+
+    // Login box animation
+$('.auth-card').hide().fadeIn(1200);
+
+
+});
+
+    </script>
+</body>
+</html>

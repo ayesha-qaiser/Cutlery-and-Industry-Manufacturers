@@ -1,0 +1,4623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CutleryHub | Machinery | Wazirabad Cutlery Industry</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         YOUR MAIN CSS
+    ====================================================== -->
+ <link
+        rel="stylesheet"
+        href="../cutlery-portal/assets/css/reponsive.css"
+    >
+    <link
+        rel="stylesheet"
+        href="../cutlery-portal/assets/css/styling.css"
+    >
+
+   
+
+
+    <!-- =====================================================
+         MACHINERY CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           GENERAL
+        ====================================================== */
+
+        :root {
+            --gold: #c9a227;
+            --gold-light: #e0bd4d;
+            --dark: #111111;
+            --dark-2: #1b1b1b;
+            --cream: #f7f5ef;
+            --light: #fafafa;
+            --text: #555;
+            --border: #e7e4dc;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #fff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           SCROLL PROGRESS
+        ====================================================== */
+
+        #scrollProgress {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 0%;
+
+            height: 4px;
+
+            background: var(--gold);
+
+            z-index: 9999;
+
+        }
+
+
+        /* =====================================================
+           SEARCH OVERLAY
+        ====================================================== */
+
+        
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .machinery-hero {
+
+            min-height: 700px;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.92),
+                    rgba(0,0,0,.62),
+                    rgba(0,0,0,.35)
+                ),
+
+                url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=2000&q=90")
+                center/cover;
+
+        }
+
+        .machinery-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 50%,
+                    rgba(201,162,39,.18),
+                    transparent 35%
+                );
+
+            pointer-events: none;
+
+        }
+
+        .machinery-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            color: white;
+
+            padding-top: 80px;
+
+            padding-bottom: 150px;
+
+        }
+
+        .hero-small-title {
+
+            color: var(--gold-light);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 20px;
+
+        }
+
+        .hero-small-title i {
+            margin-right: 8px;
+        }
+
+        .machinery-hero h1 {
+
+            max-width: 850px;
+
+            font-size: clamp(45px, 7vw, 82px);
+
+            line-height: 1.05;
+
+            margin-bottom: 25px;
+
+        }
+
+        .machinery-hero h1 span {
+            color: var(--gold-light);
+        }
+
+        .machinery-hero p {
+
+            max-width: 720px;
+
+            color: #ddd;
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+        }
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 35px;
+
+            flex-wrap: wrap;
+
+        }
+
+        .gold-btn,
+        .outline-btn {
+
+            padding: 14px 25px;
+
+            border-radius: 4px;
+
+            font-weight: 700;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            transition: .3s;
+
+        }
+
+        .gold-btn {
+
+            background: var(--gold);
+
+            color: white;
+
+        }
+
+        .gold-btn:hover {
+
+            background: #a88415;
+
+            color: white;
+
+            transform: translateY(-3px);
+
+        }
+
+        .outline-btn {
+
+            border: 1px solid rgba(255,255,255,.5);
+
+            color: white;
+
+        }
+
+        .outline-btn:hover {
+
+            background: white;
+
+            color: #111;
+
+        }
+
+
+        /* =====================================================
+           HERO STATS
+        ====================================================== */
+
+        .hero-stats {
+
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            background: rgba(12,12,12,.88);
+
+            backdrop-filter: blur(10px);
+
+            z-index: 5;
+
+        }
+
+        .hero-stats div {
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-right: 1px solid rgba(255,255,255,.1);
+
+        }
+
+        .hero-stats strong {
+
+            display: block;
+
+            font-size: 34px;
+
+            color: var(--gold-light);
+
+        }
+
+        .hero-stats small {
+
+            color: #aaa;
+
+            letter-spacing: 2px;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+        }
+
+
+        /* =====================================================
+           SECTION COMMON
+        ====================================================== */
+
+        .section-kicker {
+
+            color: var(--gold);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+
+        }
+
+        .section-title-center {
+
+            text-align: center;
+
+            max-width: 800px;
+
+            margin: 0 auto 55px;
+
+        }
+
+        .section-title-center h2 {
+
+            font-size: 48px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .section-title-center h2 span {
+            color: var(--gold);
+        }
+
+        .section-title-center p {
+
+            color: #777;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           INTRO
+        ====================================================== */
+
+        .machinery-introduction {
+
+            padding: 110px 0;
+
+            background: #fff;
+
+        }
+
+        .intro-layout {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+        .intro-photo {
+
+            height: 600px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 8px;
+
+        }
+
+        .intro-photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 1s ease;
+
+        }
+
+        .intro-photo:hover img {
+
+            transform: scale(1.08);
+
+        }
+
+        .photo-caption {
+
+            position: absolute;
+
+            bottom: 25px;
+
+            left: 25px;
+
+            right: 25px;
+
+            padding: 20px;
+
+            background: rgba(0,0,0,.75);
+
+            color: white;
+
+            border-left: 3px solid var(--gold);
+
+        }
+
+        .photo-caption span {
+
+            display: block;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            color: var(--gold-light);
+
+        }
+
+        .photo-caption strong {
+
+            font-size: 25px;
+
+        }
+
+        .intro-text h2 {
+
+            font-size: 52px;
+
+            line-height: 1.1;
+
+            margin-bottom: 25px;
+
+        }
+
+        .intro-text h2 span {
+            color: var(--gold);
+        }
+
+        .intro-lead {
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            line-height: 1.8;
+
+        }
+
+        .intro-text > p {
+
+            color: #666;
+
+            line-height: 1.9;
+
+        }
+
+        .intro-checks {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+            margin-top: 30px;
+
+        }
+
+        .intro-checks div {
+
+            display: flex;
+
+            gap: 10px;
+
+            align-items: center;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+        }
+
+        .intro-checks i {
+
+            width: 28px;
+
+            height: 28px;
+
+            border-radius: 50%;
+
+            background: #f4edcf;
+
+            color: var(--gold);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        /* =====================================================
+           MACHINERY DIRECTORY
+        ====================================================== */
+
+        .machinery-directory {
+
+            padding: 110px 0;
+
+            background: var(--cream);
+
+        }
+
+        .machine-filter {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 45px;
+
+        }
+
+        .machine-filter-btn {
+
+            padding: 11px 22px;
+
+            border: 1px solid #ddd;
+
+            background: white;
+
+            border-radius: 50px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+        }
+
+        .machine-filter-btn:hover,
+        .machine-filter-btn.active {
+
+            background: var(--dark);
+
+            color: white;
+
+            border-color: var(--dark);
+
+        }
+
+        .machine-directory-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+
+        }
+
+        .advanced-machine-card {
+
+            background: white;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            box-shadow: 0 12px 40px rgba(0,0,0,.06);
+
+            transition: .4s;
+
+        }
+
+        .advanced-machine-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 0 25px 55px rgba(0,0,0,.12);
+
+        }
+
+        .machine-image {
+
+            height: 300px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+        .machine-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform .8s ease;
+
+        }
+
+        .advanced-machine-card:hover .machine-image img {
+
+            transform: scale(1.08);
+
+        }
+
+        .machine-index {
+
+            position: absolute;
+
+            top: 20px;
+
+            left: 20px;
+
+            width: 48px;
+
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--gold);
+
+            color: white;
+
+            font-weight: 800;
+
+        }
+
+        .machine-tag {
+
+            position: absolute;
+
+            bottom: 20px;
+
+            left: 20px;
+
+            padding: 8px 13px;
+
+            background: rgba(0,0,0,.75);
+
+            color: white;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+
+        }
+
+        .machine-content {
+
+            padding: 30px;
+
+        }
+
+        .machine-category {
+
+            color: var(--gold);
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+
+        }
+
+        .machine-content h3 {
+
+            font-size: 31px;
+
+            margin: 8px 0 15px;
+
+        }
+
+        .machine-main-description {
+
+            color: #666;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+
+        }
+
+        .detail-section {
+
+            background: #f7f6f2;
+
+            border-left: 3px solid var(--gold);
+
+            padding: 18px;
+
+            margin: 22px 0;
+
+        }
+
+        .detail-section h4 {
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            margin-bottom: 9px;
+
+        }
+
+        .detail-section h4 i {
+
+            color: var(--gold);
+
+            margin-right: 7px;
+
+        }
+
+        .detail-section p {
+
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.75;
+
+            margin: 0;
+
+        }
+
+        .machine-detail-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            border-top: 1px solid #e7e7e7;
+
+            border-left: 1px solid #e7e7e7;
+
+        }
+
+        .machine-detail-grid div {
+
+            padding: 14px;
+
+            border-right: 1px solid #e7e7e7;
+
+            border-bottom: 1px solid #e7e7e7;
+
+        }
+
+        .machine-detail-grid span {
+
+            display: block;
+
+            color: #999;
+
+            font-size: 8px;
+
+            letter-spacing: 1px;
+
+            font-weight: 800;
+
+            margin-bottom: 5px;
+
+        }
+
+        .machine-detail-grid strong {
+
+            font-size: 11px;
+
+        }
+
+        .machine-benefit {
+
+            margin-top: 20px;
+
+            padding: 16px;
+
+            background: #111;
+
+            display: flex;
+
+            gap: 12px;
+
+        }
+
+        .machine-benefit > i {
+
+            color: var(--gold-light);
+
+            margin-top: 4px;
+
+        }
+
+        .machine-benefit strong {
+
+            display: block;
+
+            color: var(--gold-light);
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 5px;
+
+        }
+
+        .machine-benefit p {
+
+            color: #aaa;
+
+            font-size: 12px;
+
+            margin: 0;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+           WORKFLOW
+        ====================================================== */
+
+        .machine-workflow {
+
+            padding: 110px 0;
+
+            background:
+
+                linear-gradient(
+                    rgba(10,10,10,.96),
+                    rgba(10,10,10,.96)
+                ),
+
+                url("https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+
+            color: white;
+
+        }
+
+        .section-title-center.light p {
+            color: #aaa;
+        }
+
+        .section-title-center.light h2 {
+            color: white;
+        }
+
+        .workflow-line {
+
+            display: grid;
+
+            grid-template-columns: repeat(6, 1fr);
+
+            gap: 15px;
+
+            position: relative;
+
+        }
+
+        .workflow-step {
+
+            text-align: center;
+
+            position: relative;
+
+            padding: 25px 12px;
+
+        }
+
+        .workflow-step::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 46px;
+
+            left: 50%;
+
+            width: 100%;
+
+            height: 1px;
+
+            background: rgba(201,162,39,.35);
+
+            z-index: 0;
+
+        }
+
+        .workflow-step:last-child::before {
+            display: none;
+        }
+
+        .workflow-number {
+
+            width: 52px;
+
+            height: 52px;
+
+            border-radius: 50%;
+
+            background: var(--gold);
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin: 0 auto 20px;
+
+            position: relative;
+
+            z-index: 2;
+
+            font-weight: 800;
+
+        }
+
+        .workflow-step > i {
+
+            color: var(--gold-light);
+
+            font-size: 23px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .workflow-step h3 {
+
+            font-size: 20px;
+
+        }
+
+        .workflow-step p {
+
+            color: #999;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           TECHNICAL TABLE
+        ====================================================== */
+
+        .technical-data {
+
+            padding: 110px 0;
+
+        }
+
+        .technical-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+            align-items: end;
+
+            margin-bottom: 40px;
+
+        }
+
+        .technical-header h2 {
+
+            font-size: 48px;
+
+            margin: 0;
+
+        }
+
+        .technical-header h2 span {
+            color: var(--gold);
+        }
+
+        .technical-header > p {
+
+            max-width: 450px;
+
+            color: #777;
+
+            line-height: 1.8;
+
+            margin: 0;
+
+        }
+
+        .technical-table-wrapper {
+
+            overflow-x: auto;
+
+            border: 1px solid #ddd;
+
+        }
+
+        .technical-table {
+
+            width: 100%;
+
+            min-width: 700px;
+
+            border-collapse: collapse;
+
+        }
+
+        .technical-table th {
+
+            background: #111;
+
+            color: white;
+
+            padding: 18px;
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            text-align: left;
+
+        }
+
+        .technical-table td {
+
+            padding: 18px;
+
+            border-bottom: 1px solid #eee;
+
+            font-size: 13px;
+
+        }
+
+        .technical-table tbody tr {
+
+            transition: .2s;
+
+        }
+
+        .technical-table tbody tr:hover {
+
+            background: #faf7eb;
+
+        }
+
+
+        /* =====================================================
+           SAFETY
+        ====================================================== */
+
+        .safety-section {
+
+            padding: 100px 0;
+
+            background: var(--cream);
+
+        }
+
+        .safety-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+
+        }
+
+        .safety-card {
+
+            background: white;
+
+            padding: 35px;
+
+            display: flex;
+
+            gap: 25px;
+
+            border-radius: 8px;
+
+            transition: .3s;
+
+        }
+
+        .safety-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow: 0 20px 50px rgba(0,0,0,.08);
+
+        }
+
+        .safety-icon {
+
+            min-width: 60px;
+
+            height: 60px;
+
+            background: #111;
+
+            color: var(--gold-light);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 23px;
+
+        }
+
+        .safety-card span {
+
+            color: var(--gold);
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+
+        }
+
+        .safety-card h3 {
+
+            font-size: 27px;
+
+            margin: 8px 0;
+
+        }
+
+        .safety-card p {
+
+            color: #777;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+        }
+
+        .safety-card ul {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 15px 0 0;
+
+        }
+
+        .safety-card li {
+
+            margin-bottom: 9px;
+
+            color: #555;
+
+            font-size: 12px;
+
+        }
+
+        .safety-card li i {
+
+            color: var(--gold);
+
+            margin-right: 8px;
+
+        }
+
+
+        /* =====================================================
+           TEVTA SECTION
+        ====================================================== */
+
+        .tevta-machine-section {
+
+            padding: 110px 0;
+
+        }
+
+        .tevta-machine-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+        .tevta-photo {
+
+            height: 520px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 8px;
+
+        }
+
+        .tevta-photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+        .tevta-label {
+
+            position: absolute;
+
+            left: 25px;
+
+            bottom: 25px;
+
+            background: #111;
+
+            color: var(--gold-light);
+
+            padding: 12px 18px;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+
+        }
+
+        .tevta-text h2 {
+
+            font-size: 50px;
+
+            line-height: 1.1;
+
+        }
+
+        .tevta-text h2 span {
+            color: var(--gold);
+        }
+
+        .tevta-text p {
+
+            color: #666;
+
+            line-height: 1.9;
+
+        }
+
+        .dark-gold-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            background: #111;
+
+            color: white;
+
+            padding: 14px 22px;
+
+            margin-top: 15px;
+
+            transition: .3s;
+
+        }
+
+        .dark-gold-btn:hover {
+
+            background: var(--gold);
+
+            color: white;
+
+        }
+
+        .reference-buttons {
+
+            display: flex;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            margin-top: 20px;
+
+        }
+
+        .reference-buttons a {
+
+            padding: 10px 15px;
+
+            border: 1px solid #ddd;
+
+            color: #333;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+        }
+
+        .reference-buttons a:hover {
+
+            border-color: var(--gold);
+
+            color: var(--gold);
+
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .machinery-cta {
+
+            min-height: 480px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            background:
+
+                linear-gradient(
+                    rgba(0,0,0,.88),
+                    rgba(0,0,0,.88)
+                ),
+
+                url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+        .machinery-cta-content {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+        .machinery-cta h2 {
+
+            font-size: clamp(42px, 6vw, 70px);
+
+        }
+
+        .machinery-cta h2 span {
+            color: var(--gold-light);
+        }
+
+        .machinery-cta p {
+
+            max-width: 650px;
+
+            margin: 20px auto 30px;
+
+            color: #bbb;
+
+            line-height: 1.8;
+
+        }
+
+        .cta-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .footer {
+
+            background: #0c0c0c;
+
+            color: white;
+
+            padding: 70px 0 20px;
+
+        }
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+
+            gap: 50px;
+
+        }
+
+        .footer-logo {
+
+            color: white;
+
+            display: inline-flex;
+
+            margin-bottom: 20px;
+
+        }
+
+        .footer-about p {
+
+            color: #888;
+
+            line-height: 1.8;
+
+            font-size: 13px;
+
+            max-width: 350px;
+
+        }
+
+        .social-links {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 20px;
+
+        }
+
+        .social-links a {
+
+            width: 38px;
+
+            height: 38px;
+
+            border: 1px solid #333;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: .3s;
+
+        }
+
+        .social-links a:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+        }
+
+        .footer-column h3 {
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 13px;
+
+            color: var(--gold-light);
+
+            margin-bottom: 20px;
+
+        }
+
+        .footer-column a {
+
+            display: block;
+
+            color: #888;
+
+            font-size: 12px;
+
+            margin-bottom: 12px;
+
+            transition: .3s;
+
+        }
+
+        .footer-column a:hover {
+
+            color: white;
+
+            padding-left: 5px;
+
+        }
+
+        .footer-bottom {
+
+            margin-top: 60px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #222;
+
+            color: #666;
+
+            font-size: 11px;
+
+            text-align: center;
+
+        }
+
+
+        /* =====================================================
+           REVEAL ANIMATION
+        ====================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(45px);
+
+            transition:
+
+                opacity .8s ease,
+
+                transform .8s ease;
+
+        }
+
+        .reveal.show {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 992px) {
+
+            .intro-layout,
+            .tevta-machine-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .machine-directory-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .workflow-line {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+            .workflow-step::before {
+
+                display: none;
+
+            }
+
+            .safety-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .footer-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            .technical-header {
+
+                display: block;
+
+            }
+
+            .technical-header > p {
+
+                margin-top: 20px;
+
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+            .machinery-hero {
+
+                min-height: 720px;
+
+            }
+
+            .hero-stats {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .hero-stats div {
+
+                padding: 12px;
+
+            }
+
+            .hero-stats strong {
+
+                font-size: 24px;
+
+            }
+
+            .intro-photo,
+            .tevta-photo {
+
+                height: 400px;
+
+            }
+
+            .intro-text h2,
+            .tevta-text h2 {
+
+                font-size: 38px;
+
+            }
+
+            .section-title-center h2,
+            .technical-header h2 {
+
+                font-size: 38px;
+
+            }
+
+            .workflow-line {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .machine-detail-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .intro-checks {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .workflow-line {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .machine-content {
+
+                padding: 20px;
+
+            }
+
+            .search-box {
+
+                padding: 30px 20px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SCROLL PROGRESS
+===================================================== -->
+
+<div id="scrollProgress"></div>
+
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+
+<header class="header">
+
+    <nav class="navbar">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">⚔</span>
+
+            <span class="logo-name">
+                Cutlery<span>Hub</span>
+            </span>
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    Categories
+                </a>
+            </li>
+
+            <li>
+                <a href="manufacturers.html">
+                    Manufacturers
+                </a>
+            </li>
+
+            <li>
+                <a href="machinery.html"class="active">
+                    Machinery
+                </a>
+            </li>
+
+            <li>
+                <a href="manufacturing.html" >
+                    Process
+                </a>
+            </li>
+
+            <li>
+                <a href="training2.html">
+                    Training
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+
+        <!-- RIGHT NAVIGATION -->
+
+        <div class="nav-actions">
+
+
+            <!-- Search -->
+
+            <button
+                class="search-btn"
+                onclick="openSearch()"
+                aria-label="Search"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+
+
+            <!-- Login -->
+
+            <a href="login.html" class="login-btn">
+
+                Login
+
+            </a>
+
+
+
+            <!-- Register -->
+
+            <a href="register.html" class="register-btn">
+
+                Register
+
+            </a>
+
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open Menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     SEARCH OVERLAY
+===================================================== -->
+
+<div class="search-overlay" id="searchOverlay">
+
+
+    <div class="search-box">
+
+
+        <!-- Close -->
+
+        <button
+            class="close-search"
+            onclick="closeSearch()"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <h2>
+            Search CutleryHub
+        </h2>
+
+
+        <p>
+            Search products, manufacturers, machinery and more.
+        </p>
+
+
+
+        <div class="search-input">
+
+            <input
+                type="text"
+                id="globalSearch"
+                placeholder="Search here..."
+            >
+
+            <button onclick="performSearch()">
+
+                <i class="fa-solid fa-search"></i>
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="machinery-hero">
+
+    <div class="container machinery-hero-content">
+
+        <div class="hero-small-title">
+
+            <i class="fa-solid fa-industry"></i>
+
+            WAZIRABAD CUTLERY INDUSTRY
+
+        </div>
+
+
+        <h1>
+
+            Machinery Behind
+
+            <span>
+                Precision Cutlery
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Explore the machinery and industrial operations
+            that support cutlery manufacturing — from
+            stainless-steel preparation and cutting to
+            forming, grinding, polishing and final finishing.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#machinery"
+                class="gold-btn"
+            >
+
+                Explore Machinery
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </a>
+
+
+            <a
+                href="#workflow"
+                class="outline-btn"
+            >
+
+                View Production Workflow
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO STATS -->
+
+    <div class="hero-stats">
+
+        <div>
+
+            <strong>
+                <span
+                    class="counter"
+                    data-target="06"
+                >
+                    0
+                </span>
+            </strong>
+
+            <small>
+                FEATURED MACHINE TYPES
+            </small>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                <span
+                    class="counter"
+                    data-target="06"
+                >
+                    0
+                </span>
+            </strong>
+
+            <small>
+                MAIN WORKFLOW STAGES
+            </small>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                <span
+                    class="counter"
+                    data-target="01"
+                >
+                    0
+                </span>
+            </strong>
+
+            <small>
+                INDUSTRY FOCUS
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="machinery-introduction">
+
+    <div class="container">
+
+        <div class="intro-layout">
+
+
+            <!-- IMAGE -->
+
+            <div class="intro-photo reveal">
+<img src="../cutlery-portal/images/ayes.jpg" alt="Knife">
+                
+
+                <div class="photo-caption">
+
+                    <span>
+                        INDUSTRIAL MACHINERY
+                    </span>
+
+                    <strong>
+                        Wazirabad Cutlery
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="intro-text reveal">
+
+                <div class="section-kicker">
+                    MACHINERY & PRODUCTION
+                </div>
+
+
+                <h2>
+
+                    Where
+
+                    <span>
+                        Technology
+                    </span>
+
+                    Meets Craftsmanship
+
+                </h2>
+
+
+                <p class="intro-lead">
+
+                    Machinery provides the controlled
+                    mechanical operations needed to transform
+                    prepared metal into useful cutlery
+                    components and finished products.
+
+                </p>
+
+
+                <p>
+
+                    In cutlery manufacturing, different machines
+                    support different stages of production.
+                    Cutting equipment prepares material, forming
+                    equipment creates shapes, grinding refines
+                    edges and surfaces, while polishing and
+                    buffing equipment support final finishing.
+
+                </p>
+
+
+                <div class="intro-checks">
+
+                    <div>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Controlled material processing
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Consistent production operations
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Surface refinement
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Skilled machine operation
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MACHINERY DIRECTORY
+===================================================== -->
+
+<section
+    class="machinery-directory"
+    id="machinery"
+>
+
+    <div class="container">
+
+
+        <!-- HEADING -->
+
+        <div class="section-title-center reveal">
+
+            <div class="section-kicker">
+                MACHINERY DIRECTORY
+            </div>
+
+            <h2>
+
+                Explore The
+
+                <span>
+                    Production Floor
+                </span>
+
+            </h2>
+
+            <p>
+
+                Each machine performs a different role in
+                the production journey. Explore the detailed
+                function, working principle, material,
+                production stage and output of each machine.
+
+            </p>
+
+        </div>
+
+
+        <!-- FILTER -->
+
+        <div class="machine-filter reveal">
+
+            <button
+                class="machine-filter-btn active"
+                data-filter="all"
+            >
+                All Machines
+            </button>
+
+            <button
+                class="machine-filter-btn"
+                data-filter="cutting"
+            >
+                Cutting
+            </button>
+
+            <button
+                class="machine-filter-btn"
+                data-filter="forming"
+            >
+                Forming
+            </button>
+
+            <button
+                class="machine-filter-btn"
+                data-filter="grinding"
+            >
+                Grinding
+            </button>
+
+            <button
+                class="machine-filter-btn"
+                data-filter="finishing"
+            >
+                Finishing
+            </button>
+
+        </div>
+
+
+        <!-- MACHINE GRID -->
+
+        <div class="machine-directory-grid">
+
+
+            <!-- =================================================
+                 MACHINE 01
+            ================================================== -->
+
+            <article
+                class="advanced-machine-card reveal"
+                data-category="cutting"
+            >
+
+                <div class="machine-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1200&q=85"
+                        alt="Industrial metal cutting machinery"
+                    >
+
+                    <div class="machine-index">
+                        01
+                    </div>
+
+                    <div class="machine-tag">
+                        CUTTING
+                    </div>
+
+                </div>
+
+
+                <div class="machine-content">
+
+                    <span class="machine-category">
+                        MATERIAL PREPARATION
+                    </span>
+
+                    <h3>
+                        Sheet Cutting Machine
+                    </h3>
+
+
+                    <p class="machine-main-description">
+
+                        Sheet cutting machines are used to
+                        divide stainless-steel sheets or
+                        prepared metal stock into smaller
+                        production pieces. Proper material
+                        preparation is an important early
+                        step because the size and shape of
+                        the prepared piece affects later
+                        forming operations.
+
+                    </p>
+
+
+                    <div class="detail-section">
+
+                        <h4>
+
+                            <i class="fa-solid fa-gears"></i>
+
+                            How It Works
+
+                        </h4>
+
+                        <p>
+
+                            The stainless-steel sheet is positioned
+                            according to the required cutting
+                            dimensions. The cutting mechanism then
+                            separates the sheet into suitable
+                            production pieces. The exact cutting
+                            method depends on the machine design,
+                            material thickness and workshop
+                            requirements.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="machine-detail-grid">
+
+                        <div>
+
+                            <span>
+                                PRIMARY FUNCTION
+                            </span>
+
+                            <strong>
+                                Sheet Cutting
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                MATERIAL
+                            </span>
+
+                            <strong>
+                                Stainless Steel
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                PRODUCTION STAGE
+                            </span>
+
+                            <strong>
+                                Initial Preparation
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                OUTPUT
+                            </span>
+
+                            <strong>
+                                Cut Components
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="machine-benefit">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <strong>
+                                MAIN BENEFIT
+                            </strong>
+
+                            <p>
+                                Controlled material preparation
+                                for subsequent manufacturing
+                                operations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 MACHINE 02
+            ================================================== -->
+
+            <article
+                class="advanced-machine-card reveal"
+                data-category="forming"
+            >
+
+                <div class="machine-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85"
+                        alt="Industrial hydraulic press and forming machinery"
+                    >
+
+                    <div class="machine-index">
+                        02
+                    </div>
+
+                    <div class="machine-tag">
+                        FORMING
+                    </div>
+
+                </div>
+
+
+                <div class="machine-content">
+
+                    <span class="machine-category">
+                        METAL FORMING
+                    </span>
+
+                    <h3>
+                        Hydraulic Press Machine
+                    </h3>
+
+
+                    <p class="machine-main-description">
+
+                        Hydraulic presses use controlled pressure
+                        to shape prepared metal components.
+                        In manufacturing environments, suitable
+                        tooling can be used to create curves,
+                        forms and shapes required for different
+                        cutlery components.
+
+                    </p>
+
+
+                    <div class="detail-section">
+
+                        <h4>
+
+                            <i class="fa-solid fa-compress"></i>
+
+                            How It Works
+
+                        </h4>
+
+                        <p>
+
+                            A prepared metal piece is placed in
+                            suitable tooling. Hydraulic pressure
+                            moves the press mechanism and applies
+                            force to the material. The tooling and
+                            operating conditions depend on the
+                            particular forming operation.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="machine-detail-grid">
+
+                        <div>
+
+                            <span>
+                                PRIMARY FUNCTION
+                            </span>
+
+                            <strong>
+                                Metal Forming
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                MATERIAL
+                            </span>
+
+                            <strong>
+                                Stainless Steel
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                PRODUCTION STAGE
+                            </span>
+
+                            <strong>
+                                Shaping
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                OUTPUT
+                            </span>
+
+                            <strong>
+                                Formed Components
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="machine-benefit">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <strong>
+                                MAIN BENEFIT
+                            </strong>
+
+                            <p>
+                                Supports controlled and repeatable
+                                forming operations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 MACHINE 03
+            ================================================== -->
+
+            <article
+                class="advanced-machine-card reveal"
+                data-category="forming"
+            >
+
+                <div class="machine-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1200&q=85"
+                        alt="Industrial rolling machinery"
+                    >
+
+                    <div class="machine-index">
+                        03
+                    </div>
+
+                    <div class="machine-tag">
+                        FORMING
+                    </div>
+
+                </div>
+
+
+                <div class="machine-content">
+
+                    <span class="machine-category">
+                        MATERIAL SHAPING
+                    </span>
+
+                    <h3>
+                        Rolling Machine
+                    </h3>
+
+
+                    <p class="machine-main-description">
+
+                        Rolling equipment is used in metalworking
+                        operations to shape or prepare metal
+                        material. Depending on the machine design,
+                        rolling can influence the form or dimensions
+                        of material before further production
+                        operations.
+
+                    </p>
+
+
+                    <div class="detail-section">
+
+                        <h4>
+
+                            <i class="fa-solid fa-arrows-left-right"></i>
+
+                            How It Works
+
+                        </h4>
+
+                        <p>
+
+                            Metal passes between rollers that apply
+                            controlled mechanical force. As the
+                            material moves through the rollers,
+                            its form or dimensions can be modified
+                            according to the intended operation.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="machine-detail-grid">
+
+                        <div>
+
+                            <span>
+                                PRIMARY FUNCTION
+                            </span>
+
+                            <strong>
+                                Material Shaping
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                MATERIAL
+                            </span>
+
+                            <strong>
+                                Metal Stock
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                PRODUCTION STAGE
+                            </span>
+
+                            <strong>
+                                Preparation
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                OUTPUT
+                            </span>
+
+                            <strong>
+                                Prepared Material
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="machine-benefit">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <strong>
+                                MAIN BENEFIT
+                            </strong>
+
+                            <p>
+                                Helps prepare metal material
+                                for later forming operations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 MACHINE 04
+            ================================================== -->
+
+            <article
+                class="advanced-machine-card reveal"
+                data-category="grinding"
+            >
+
+                <div class="machine-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1200&q=85"
+                        alt="Industrial grinding machine"
+                    >
+
+                    <div class="machine-index">
+                        04
+                    </div>
+
+                    <div class="machine-tag">
+                        GRINDING
+                    </div>
+
+                </div>
+
+
+                <div class="machine-content">
+
+                    <span class="machine-category">
+                        SURFACE REFINEMENT
+                    </span>
+
+                    <h3>
+                        Grinding Machine
+                    </h3>
+
+
+                    <p class="machine-main-description">
+
+                        Grinding machines refine metal components
+                        after cutting and forming. Grinding can
+                        remove unwanted material, reduce rough
+                        areas and prepare edges or surfaces for
+                        subsequent finishing operations.
+
+                    </p>
+
+
+                    <div class="detail-section">
+
+                        <h4>
+
+                            <i class="fa-solid fa-gears"></i>
+
+                            How It Works
+
+                        </h4>
+
+                        <p>
+
+                            An abrasive wheel, belt or another
+                            suitable grinding surface contacts
+                            the metal component. Controlled
+                            abrasion removes small amounts of
+                            material and helps produce a more
+                            refined edge or surface.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="machine-detail-grid">
+
+                        <div>
+
+                            <span>
+                                PRIMARY FUNCTION
+                            </span>
+
+                            <strong>
+                                Surface Refinement
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                MATERIAL
+                            </span>
+
+                            <strong>
+                                Stainless Steel
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                PRODUCTION STAGE
+                            </span>
+
+                            <strong>
+                                Grinding
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                OUTPUT
+                            </span>
+
+                            <strong>
+                                Refined Component
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="machine-benefit">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <strong>
+                                MAIN BENEFIT
+                            </strong>
+
+                            <p>
+                                Prepares edges and surfaces
+                                for later finishing operations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 MACHINE 05
+            ================================================== -->
+
+            <article
+                class="advanced-machine-card reveal"
+                data-category="finishing"
+            >
+
+                <div class="machine-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=1200&q=85"
+                        alt="Industrial polishing machinery"
+                    >
+
+                    <div class="machine-index">
+                        05
+                    </div>
+
+                    <div class="machine-tag">
+                        POLISHING
+                    </div>
+
+                </div>
+
+
+                <div class="machine-content">
+
+                    <span class="machine-category">
+                        SURFACE FINISHING
+                    </span>
+
+                    <h3>
+                        Polishing Machine
+                    </h3>
+
+
+                    <p class="machine-main-description">
+
+                        Polishing machines improve the smoothness
+                        and appearance of suitable metal surfaces.
+                        For cutlery, this finishing stage is
+                        particularly important because the visible
+                        surface contributes strongly to the final
+                        product appearance.
+
+                    </p>
+
+
+                    <div class="detail-section">
+
+                        <h4>
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            How It Works
+
+                        </h4>
+
+                        <p>
+
+                            The metal component is brought into
+                            contact with a suitable polishing
+                            wheel or finishing medium. Controlled
+                            finishing action improves the surface
+                            according to the required product
+                            finish.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="machine-detail-grid">
+
+                        <div>
+
+                            <span>
+                                PRIMARY FUNCTION
+                            </span>
+
+                            <strong>
+                                Surface Polishing
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                MATERIAL
+                            </span>
+
+                            <strong>
+                                Stainless Steel
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                PRODUCTION STAGE
+                            </span>
+
+                            <strong>
+                                Finishing
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                OUTPUT
+                            </span>
+
+                            <strong>
+                                Polished Surface
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="machine-benefit">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <strong>
+                                MAIN BENEFIT
+                            </strong>
+
+                            <p>
+                                Improves surface smoothness and
+                                final visual appearance.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 MACHINE 06
+            ================================================== -->
+
+            <article
+                class="advanced-machine-card reveal"
+                data-category="finishing"
+            >
+
+                <div class="machine-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=85"
+                        alt="Industrial buffing and finishing machinery"
+                    >
+
+                    <div class="machine-index">
+                        06
+                    </div>
+
+                    <div class="machine-tag">
+                        FINISHING
+                    </div>
+
+                </div>
+
+
+                <div class="machine-content">
+
+                    <span class="machine-category">
+                        FINAL SURFACE FINISH
+                    </span>
+
+                    <h3>
+                        Buffing Machine
+                    </h3>
+
+
+                    <p class="machine-main-description">
+
+                        Buffing equipment supports fine surface
+                        finishing after grinding and polishing.
+                        It can improve surface smoothness and
+                        contribute to a refined appearance on
+                        suitable stainless-steel surfaces.
+
+                    </p>
+
+
+                    <div class="detail-section">
+
+                        <h4>
+
+                            <i class="fa-solid fa-star"></i>
+
+                            How It Works
+
+                        </h4>
+
+                        <p>
+
+                            A rotating buffing wheel works with
+                            an appropriate finishing compound or
+                            medium. The operator carefully
+                            presents the component to the wheel
+                            to achieve the required surface finish.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="machine-detail-grid">
+
+                        <div>
+
+                            <span>
+                                PRIMARY FUNCTION
+                            </span>
+
+                            <strong>
+                                Fine Finishing
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                MATERIAL
+                            </span>
+
+                            <strong>
+                                Stainless Steel
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                PRODUCTION STAGE
+                            </span>
+
+                            <strong>
+                                Final Finish
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                OUTPUT
+                            </span>
+
+                            <strong>
+                                Finished Surface
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="machine-benefit">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <strong>
+                                MAIN BENEFIT
+                            </strong>
+
+                            <p>
+                                Supports fine finishing and
+                                enhances product appearance.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WORKFLOW
+===================================================== -->
+
+<section
+    class="machine-workflow"
+    id="workflow"
+>
+
+    <div class="container">
+
+
+        <div class="section-title-center light reveal">
+
+            <div class="section-kicker">
+                PRODUCTION WORKFLOW
+            </div>
+
+            <h2>
+
+                From Steel
+
+                <span>
+                    To Finished Cutlery
+                </span>
+
+            </h2>
+
+            <p>
+
+                Machinery supports multiple stages of
+                production while skilled workers operate,
+                monitor and inspect the process.
+
+            </p>
+
+        </div>
+
+
+        <div class="workflow-line">
+
+
+            <div class="workflow-step reveal">
+
+                <div class="workflow-number">
+                    01
+                </div>
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <h3>
+                    Material
+                </h3>
+
+                <p>
+                    Stainless-steel material is prepared
+                    for production.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-step reveal">
+
+                <div class="workflow-number">
+                    02
+                </div>
+
+                <i class="fa-solid fa-scissors"></i>
+
+                <h3>
+                    Cutting
+                </h3>
+
+                <p>
+                    Metal stock is divided into required
+                    production pieces.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-step reveal">
+
+                <div class="workflow-number">
+                    03
+                </div>
+
+                <i class="fa-solid fa-compress"></i>
+
+                <h3>
+                    Forming
+                </h3>
+
+                <p>
+                    Pressing and forming create the required
+                    product shape.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-step reveal">
+
+                <div class="workflow-number">
+                    04
+                </div>
+
+                <i class="fa-solid fa-gears"></i>
+
+                <h3>
+                    Grinding
+                </h3>
+
+                <p>
+                    Edges and surfaces are refined before
+                    finishing.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-step reveal">
+
+                <div class="workflow-number">
+                    05
+                </div>
+
+                <i class="fa-solid fa-sparkles"></i>
+
+                <h3>
+                    Polishing
+                </h3>
+
+                <p>
+                    Surfaces receive their required finished
+                    appearance.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-step reveal">
+
+                <div class="workflow-number">
+                    06
+                </div>
+
+                <i class="fa-solid fa-box-open"></i>
+
+                <h3>
+                    Final Product
+                </h3>
+
+                <p>
+                    Finished cutlery proceeds to inspection
+                    and packaging.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TECHNICAL DATA
+===================================================== -->
+
+<section class="technical-data">
+
+    <div class="container">
+
+
+        <div class="technical-header reveal">
+
+            <div>
+
+                <div class="section-kicker">
+                    TECHNICAL INFORMATION
+                </div>
+
+                <h2>
+
+                    Machinery
+
+                    <span>
+                        At A Glance
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Exact machine specifications vary according
+                to manufacturer, model, tooling, production
+                capacity and workshop requirements. This
+                table presents the general production role
+                of each machine type.
+
+            </p>
+
+        </div>
+
+
+        <div class="technical-table-wrapper reveal">
+
+            <table class="technical-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            MACHINE
+                        </th>
+
+                        <th>
+                            PRIMARY ROLE
+                        </th>
+
+                        <th>
+                            PRODUCTION STAGE
+                        </th>
+
+                        <th>
+                            MAIN OUTPUT
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Sheet Cutting Machine
+                        </td>
+
+                        <td>
+                            Material Cutting
+                        </td>
+
+                        <td>
+                            Preparation
+                        </td>
+
+                        <td>
+                            Cut Components
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Hydraulic Press
+                        </td>
+
+                        <td>
+                            Metal Forming
+                        </td>
+
+                        <td>
+                            Shaping
+                        </td>
+
+                        <td>
+                            Formed Components
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Rolling Machine
+                        </td>
+
+                        <td>
+                            Material Shaping
+                        </td>
+
+                        <td>
+                            Preparation
+                        </td>
+
+                        <td>
+                            Prepared Material
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Grinding Machine
+                        </td>
+
+                        <td>
+                            Edge & Surface Refinement
+                        </td>
+
+                        <td>
+                            Grinding
+                        </td>
+
+                        <td>
+                            Refined Component
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Polishing Machine
+                        </td>
+
+                        <td>
+                            Surface Finishing
+                        </td>
+
+                        <td>
+                            Polishing
+                        </td>
+
+                        <td>
+                            Polished Surface
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Buffing Machine
+                        </td>
+
+                        <td>
+                            Fine Finishing
+                        </td>
+
+                        <td>
+                            Final Finish
+                        </td>
+
+                        <td>
+                            Finished Surface
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SAFETY
+===================================================== -->
+
+<section class="safety-section">
+
+    <div class="container">
+
+        <div class="section-title-center reveal">
+
+            <div class="section-kicker">
+                INDUSTRIAL PRACTICES
+            </div>
+
+            <h2>
+
+                Safety &
+
+                <span>
+                    Maintenance
+                </span>
+
+            </h2>
+
+            <p>
+
+                Machinery should be operated and maintained
+                according to appropriate workplace procedures
+                and manufacturer guidance.
+
+            </p>
+
+        </div>
+
+
+        <div class="safety-grid">
+
+
+            <!-- SAFETY -->
+
+            <div class="safety-card reveal">
+
+                <div class="safety-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        MACHINE SAFETY
+                    </span>
+
+                    <h3>
+                        Safe Machine Operation
+                    </h3>
+
+                    <p>
+
+                        Industrial machinery requires proper
+                        training, suitable protective equipment
+                        and safe operating procedures.
+
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Appropriate protective equipment
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Machine guards and safe operation
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Proper operator training
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Awareness of emergency procedures
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MAINTENANCE -->
+
+            <div class="safety-card reveal">
+
+                <div class="safety-icon">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        MACHINE MAINTENANCE
+                    </span>
+
+                    <h3>
+                        Regular Maintenance
+                    </h3>
+
+                    <p>
+
+                        Routine inspection and maintenance can
+                        help machinery operate consistently and
+                        reduce avoidable production interruptions.
+
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Routine inspection
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Cleaning and lubrication
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Checking worn components
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Following manufacturer instructions
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TEVTA SECTION
+===================================================== -->
+
+<section class="tevta-machine-section">
+
+    <div class="container">
+
+        <div class="tevta-machine-grid">
+
+
+            <!-- IMAGE -->
+
+            <div class="tevta-photo reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=85"
+                    alt="Technical industrial training environment"
+                >
+
+                <div class="tevta-label">
+                    TECHNICAL TRAINING
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="tevta-text reveal">
+
+                <div class="section-kicker">
+                    SKILLS & TRAINING
+                </div>
+
+
+                <h2>
+
+                    Machinery Needs
+
+                    <span>
+                        Skilled People
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Modern machinery is only one part of an
+                    industrial production system. Skilled
+                    operators, technicians and maintenance
+                    workers are also important for safe and
+                    effective machine operation.
+
+                </p>
+
+
+                <p>
+
+                    CutleryHub keeps machinery and technical
+                    training as connected but separate topics.
+                    The Machinery page explains production
+                    equipment, while the Training section can
+                    explain vocational education, technical
+                    skills and TEVTA-related information.
+
+                </p>
+
+
+                <a
+                    href="training.html"
+                    class="dark-gold-btn"
+                >
+
+                    Explore Training & TEVTA
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <div class="reference-buttons">
+
+                    <a
+                        href="https://www.google.com/search?tbm=isch&q=TEVTA+Wazirabad+machinery"
+                        target="_blank"
+                    >
+
+                        <i class="fa-brands fa-google"></i>
+
+                        TEVTA Wazirabad Images
+
+                    </a>
+
+
+                    <a
+                        href="https://www.google.com/search?tbm=isch&q=Wazirabad+cutlery+machinery"
+                        target="_blank"
+                    >
+
+                        <i class="fa-solid fa-image"></i>
+
+                        Wazirabad Machinery Images
+
+                    </a>
+
+
+                    <a
+                        href="https://tevta.gop.pk/"
+                        target="_blank"
+                    >
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                        TEVTA Official Website
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="machinery-cta">
+
+    <div class="container machinery-cta-content">
+
+        <div class="section-kicker">
+            CUTLERYHUB
+        </div>
+
+
+        <h2>
+
+            Machines Build
+
+            <span>
+                The Foundation.
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            Explore the machinery, manufacturing processes,
+            manufacturers and skilled workforce behind the
+            Wazirabad cutlery industry.
+
+        </p>
+
+
+        <div class="cta-buttons">
+
+            <a
+                href="manufacturers.html"
+                class="gold-btn"
+            >
+
+                Explore Manufacturers
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="manufacturing.html"
+                class="outline-btn"
+            >
+
+                Manufacturing Process
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-about">
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo"
+                >
+
+                    <span class="logo-icon">
+                        ⚔
+                    </span>
+
+                    <span class="logo-name">
+                        Cutlery<span>Hub</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    A digital portal connecting cutlery
+                    products, manufacturers, machinery,
+                    manufacturing processes, training
+                    and industry resources.
+
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="manufacturers.html">
+                    Manufacturers
+                </a>
+
+                <a href="machinery.html">
+                    Machinery
+                </a>
+
+            </div>
+
+
+
+            <!-- RESOURCES -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Resources
+                </h3>
+
+                <a href="manufacturing.html">
+                    Manufacturing Process
+                </a>
+
+                <a href="training.html">
+                    Training & TEVTA
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="contact.html">
+                    Customer Inquiry
+                </a>
+
+            </div>
+
+
+
+            <!-- ACCOUNT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Account
+                </h3>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+                <a href="dashboards/customer-dashboard.html">
+                    Customer Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 CutleryHub. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- =====================================================
+     JQUERY
+===================================================== -->
+
+<script
+    src="https://code.jquery.com/jquery-3.7.1.min.js">
+</script>
+
+
+
+<!-- =====================================================
+     MAIN JS
+===================================================== -->
+
+<script
+    src="../cutlery-portal/assets/js/main.js">
+</script>
+
+
+
+<!-- =====================================================
+     MACHINERY PAGE JS
+===================================================== -->
+
+<script>
+
+$(document).ready(function () {
+
+
+    /* =====================================================
+       MACHINE FILTER
+    ====================================================== */
+
+    $(".machine-filter-btn").click(function () {
+
+        const filter = $(this).data("filter");
+
+
+        $(".machine-filter-btn").removeClass("active");
+
+        $(this).addClass("active");
+
+
+        $(".advanced-machine-card").each(function () {
+
+            const category = $(this).data("category");
+
+
+            if (filter === "all" || category === filter) {
+
+                $(this)
+                    .stop(true, true)
+                    .fadeIn(400);
+
+            } else {
+
+                $(this)
+                    .stop(true, true)
+                    .fadeOut(250);
+
+            }
+
+        });
+
+    });
+
+
+
+    /* =====================================================
+       REVEAL ANIMATION
+    ====================================================== */
+
+    function revealElements() {
+
+        $(".reveal").each(function () {
+
+            const elementTop =
+                $(this).offset().top;
+
+            const windowBottom =
+                $(window).scrollTop() +
+                $(window).height();
+
+
+            if (windowBottom > elementTop + 80) {
+
+                $(this).addClass("show");
+
+            }
+
+        });
+
+    }
+
+
+    revealElements();
+
+
+    $(window).on("scroll", function () {
+
+        revealElements();
+
+    });
+
+
+
+    /* =====================================================
+       COUNTER ANIMATION
+    ====================================================== */
+
+    $(".counter").each(function () {
+
+        const counter = $(this);
+
+        const target =
+            parseInt(counter.data("target"));
+
+
+        $({
+
+            countNum: 0
+
+        }).animate(
+
+            {
+
+                countNum: target
+
+            },
+
+            {
+
+                duration: 1600,
+
+                easing: "swing",
+
+                step: function () {
+
+                    counter.text(
+                        Math.floor(this.countNum)
+                    );
+
+                },
+
+                complete: function () {
+
+                    counter.text(target);
+
+                }
+
+            }
+
+        );
+
+    });
+
+
+
+    /* =====================================================
+       SCROLL PROGRESS
+    ====================================================== */
+
+    $(window).on("scroll", function () {
+
+        const scrollTop =
+            $(window).scrollTop();
+
+        const documentHeight =
+            $(document).height() -
+            $(window).height();
+
+        const percentage =
+            (scrollTop / documentHeight) * 100;
+
+
+        $("#scrollProgress").css(
+            "width",
+            percentage + "%"
+        );
+
+    });
+
+
+
+    /* =====================================================
+       ESC CLOSE SEARCH
+    ====================================================== */
+
+    $(document).keydown(function (event) {
+
+        if (event.key === "Escape") {
+
+            closeSearch();
+
+        }
+
+    });
+
+
+    /* =====================================================
+       SEARCH ENTER KEY
+    ====================================================== */
+
+    $("#globalSearch").keypress(function (event) {
+
+        if (event.which === 13) {
+
+            performSearch();
+
+        }
+
+    });
+
+
+    /* =====================================================
+       MACHINE CARD STAGGER
+    ====================================================== */
+
+    $(".advanced-machine-card").each(function (index) {
+
+        $(this).css(
+            "transition-delay",
+            (index * 80) + "ms"
+        );
+
+    });
+
+});
+
+
+
+/* =========================================================
+   OPEN SEARCH
+========================================================= */
+
+function openSearch() {
+
+    $("#searchOverlay").addClass("show");
+
+    setTimeout(function () {
+
+        $("#globalSearch").focus();
+
+    }, 300);
+
+}
+
+
+
+/* =========================================================
+   CLOSE SEARCH
+========================================================= */
+
+function closeSearch() {
+
+    $("#searchOverlay").removeClass("show");
+
+}
+
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+function performSearch() {
+
+    const query =
+        $("#globalSearch").val().trim().toLowerCase();
+
+
+    if (query === "") {
+
+        alert("Please enter something to search.");
+
+        return;
+
+    }
+
+
+    if (
+        query.includes("machine") ||
+        query.includes("machinery") ||
+        query.includes("press") ||
+        query.includes("grinding") ||
+        query.includes("polishing")
+    ) {
+
+        closeSearch();
+
+        document
+            .getElementById("machinery")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+        return;
+
+    }
+
+
+    if (
+        query.includes("process") ||
+        query.includes("manufacturing")
+    ) {
+
+        window.location.href =
+            "manufacturing.html";
+
+        return;
+
+    }
+
+
+    if (
+        query.includes("training") ||
+        query.includes("tevta")
+    ) {
+
+        window.location.href =
+            "training.html";
+
+        return;
+
+    }
+
+
+    if (
+        query.includes("manufacturer") ||
+        query.includes("factory")
+    ) {
+
+        window.location.href =
+            "manufacturers.html";
+
+        return;
+
+    }
+
+
+    alert(
+        "No matching section found. Try searching for machinery, process, manufacturers or training."
+    );
+
+}
+
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu() {
+
+    $("#navLinks").toggleClass("show");
+
+}
+
+
+
+/* =========================================================
+   CLOSE MENU AFTER CLICK
+========================================================= */
+
+$("#navLinks a").on("click", function () {
+
+    $("#navLinks").removeClass("show");
+
+});
+
+</script>
+
+
+</body>
+
+</html>

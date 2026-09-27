@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CutleryHub | Wazirabad Cutlery Industry</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../cutlery-portal/assets/css/reponsive.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../cutlery-portal/assets/css/styling.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">⚔</span>
+
+            <span class="logo-name">
+                Cutlery<span>Hub</span>
+            </span>
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    Categories
+                </a>
+            </li>
+
+            <li>
+                <a href="manufacturers.html">
+                    Manufacturers
+                </a>
+            </li>
+
+            <li>
+                <a href="machinery.html">
+                    Machinery
+                </a>
+            </li>
+
+            <li>
+                <a href="manufacturing.html">
+                    Process
+                </a>
+            </li>
+
+            <li>
+                <a href="training2.html">
+                    Training
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html" class="active">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+
+        <!-- RIGHT NAVIGATION -->
+
+        <div class="nav-actions">
+
+
+            <!-- Search -->
+
+            <button
+                class="search-btn"
+                onclick="openSearch()"
+                aria-label="Search"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+
+
+            <!-- Login -->
+
+            <a href="login.html" class="login-btn">
+
+                Login
+
+            </a>
+
+
+
+            <!-- Register -->
+
+            <a href="register.html" class="register-btn">
+
+                Register
+
+            </a>
+
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open Menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     SEARCH OVERLAY
+===================================================== -->
+
+<div class="search-overlay" id="searchOverlay">
+
+
+    <div class="search-box">
+
+
+        <!-- Close -->
+
+        <button
+            class="close-search"
+            onclick="closeSearch()"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <h2>
+            Search CutleryHub
+        </h2>
+
+
+        <p>
+            Search products, manufacturers, machinery and more.
+        </p>
+
+
+
+        <div class="search-input">
+
+            <input
+                type="text"
+                id="globalSearch"
+                placeholder="Search here..."
+            >
+
+            <button onclick="performSearch()">
+
+                <i class="fa-solid fa-search"></i>
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+  
+    <header class="contact-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Get In Touch With Our Manufacturing Hub</h1>
+            <p>Connect with master craftsmen and global cutlery manufacturers for bespoke orders, B2B inquiries, and partnerships.</p>
+        </div>
+    </header>
+
+    <!-- Main Contact Section -->
+    <main class="contact-main">
+        <div class="contact-container">
+            
+            <!-- Contact Information Info Box -->
+            <div class="contact-info-wrapper">
+                <div class="info-card-header">
+                    <h2>Contact Information</h2>
+                    <p>We are ready to cater to your industrial and custom cutlery requirements worldwide.</p>
+                </div>
+
+                <div class="info-details">
+                    <div class="info-item">
+                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h3>Factory & Headquarters</h3>
+                            <p>Industrial Estate, Sialkot, Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h3>Direct Line</h3>
+                            <p>+92 (300) 1234567</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h3>Email Address</h3>
+                            <p>info@cutleryindustry.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon-box"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h3>Working Hours</h3>
+                            <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Advanced Form Wrapper -->
+            <div class="contact-form-wrapper">
+                <form id="industrialContactForm" novalidate>
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and our B2B export team will respond within 24 hours.</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span>*</span></label>
+                            <input type="text" id="fullName" placeholder="John Doe" required>
+                            <small class="error-message">Please enter your name.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span>*</span></label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
+                            <small class="error-message">Please enter a valid email.</small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inquiryType">Inquiry Type <span>*</span></label>
+                            <select id="inquiryType" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="b2b">B2B Bulk Manufacturing</option>
+                                <option value="custom">Custom Blade Design</option>
+                                <option value="sample">Order Product Sample</option>
+                                <option value="other">General Support</option>
+                            </select>
+                            <small class="error-message">Please select an inquiry type.</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message">Project Details / Message <span>*</span></label>
+                        <textarea id="message" rows="5" placeholder="Describe your specifications, estimated quantities, or requirements..." required></textarea>
+                        <small class="error-message">Please enter your message.</small>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Send Inquiry</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                    <!-- Success Feedback Alert -->
+                    <div id="formSuccessAlert" class="success-alert hidden">
+                        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully to our manufacturing team.
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Map Section (Optional Integration) -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe title="Factory Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108502.93664724497!2d74.45719335!3d32.4922645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eebc97d620cd9%3A0xd64f1e9441113b2e!2sSialkot%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1680000000000!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+
+    <div class="container-custom">
+
+
+        <div class="footer-grid">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-about">
+
+
+                <!-- FOOTER LOGO -->
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo"
+                >
+
+                    <span class="logo-icon">
+                        ⚔
+                    </span>
+
+                    <span class="logo-name">
+                        Cutlery<span>Hub</span>
+                    </span>
+
+                </a>
+
+
+
+                <p>
+
+                    A digital portal connecting cutlery
+                    products, manufacturers, machinery,
+                    training and industry resources.
+
+                </p>
+
+
+
+                <div class="social-links">
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="manufacturers.html">
+                    Manufacturers
+                </a>
+
+                <a href="machinery.html">
+                    Machinery
+                </a>
+
+
+            </div>
+
+
+
+            <!-- RESOURCES -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Resources
+                </h3>
+
+
+                <a href="manufacturing-process.html">
+                    Manufacturing Process
+                </a>
+
+                <a href="training.html">
+                    Training & TEVTA
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="contact.html">
+                    Customer Inquiry
+                </a>
+
+
+            </div>
+
+
+
+            <!-- ACCOUNT -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Account
+                </h3>
+
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+                <a href="dashboards/customer-dashboard.html">
+                    Customer Dashboard
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+
+            <p>
+
+                © 2026 CutleryHub.
+                All Rights Reserved.
+
+            </p>
+
+
+        
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- MAIN JAVASCRIPT -->
+
+<script src="../cutlery-portal/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
+
+</body>
+</html>

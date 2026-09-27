@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Shopping Cart | CutleryHub</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+<!-- Main CSS -->
+    <link rel="stylesheet" href="../cutlery-portal/assets/css/styling.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../cutlery-portal/assets/css/reponsive.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="assets/css/cart.css"></head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">⚔</span>
+
+            <span class="logo-name">
+                Cutlery<span>Hub</span>
+            </span>
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html" class="active">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    Categories
+                </a>
+            </li>
+
+            <li>
+                <a href="manufacturers.html">
+                    Manufacturers
+                </a>
+            </li>
+
+            <li>
+                <a href="machinery.html">
+                    Machinery
+                </a>
+            </li>
+
+            <li>
+                <a href="manufacturing.html">
+                    Process
+                </a>
+            </li>
+
+            <li>
+                <a href="training2.html">
+                    Training
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+
+        <!-- RIGHT NAVIGATION -->
+
+        <div class="nav-actions">
+
+
+            <!-- Search -->
+
+            <button
+                class="search-btn"
+                onclick="openSearch()"
+                aria-label="Search"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+
+
+            <!-- Login -->
+
+            <a href="login.html" class="login-btn">
+
+                Login
+
+            </a>
+
+
+
+            <!-- Register -->
+
+            <a href="register.html" class="register-btn">
+
+                Register
+
+            </a>
+
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open Menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     SEARCH OVERLAY
+===================================================== -->
+
+<div class="search-overlay" id="searchOverlay">
+
+
+    <div class="search-box">
+
+
+        <!-- Close -->
+
+        <button
+            class="close-search"
+            onclick="closeSearch()"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <h2>
+            Search CutleryHub
+        </h2>
+
+
+        <p>
+            Search products, manufacturers, machinery and more.
+        </p>
+
+
+
+        <div class="search-input">
+
+            <input
+                type="text"
+                id="globalSearch"
+                placeholder="Search here..."
+            >
+
+            <button onclick="performSearch()">
+
+                <i class="fa-solid fa-search"></i>
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CART PAGE
+===================================================== -->
+
+<div class="cart-page">
+
+    <div class="container">
+
+        <!-- CART HEADER -->
+        <div class="cart-header">
+
+            <a href="products.html" class="back-link">
+                <i class="bi bi-arrow-left"></i>
+                Continue Shopping
+            </a>
+
+            <h1>Shopping Cart</h1>
+
+            <p>
+                Review your selected CutleryHub products
+            </p>
+
+        </div>
+
+
+        <!-- CART CONTENT -->
+        <div id="cartContent">
+
+            <!-- JavaScript will load cart products here -->
+
+        </div>
+
+
+        <!-- CHECKOUT SECTION -->
+        <div id="checkoutSection" style="display:none;">
+
+            <div class="row g-4 mt-4">
+
+                <!-- CUSTOMER DETAILS -->
+                <div class="col-lg-7">
+
+                    <div class="checkout-card">
+
+                        <h3>
+                            <i class="bi bi-person"></i>
+                            Customer Details
+                        </h3>
+
+                        <form id="checkoutForm">
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label class="form-label">
+                                        Full Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="customerName"
+                                        class="form-control"
+                                        placeholder="Enter your name"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label class="form-label">
+                                        Phone Number
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="customerPhone"
+                                        class="form-control"
+                                        placeholder="03XX-XXXXXXX"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="customerEmail"
+                                    class="form-control"
+                                    placeholder="example@gmail.com"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    Delivery Address
+                                </label>
+
+                                <textarea
+                                    id="customerAddress"
+                                    class="form-control"
+                                    rows="3"
+                                    placeholder="Enter complete delivery address"
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    City
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customerCity"
+                                    class="form-control"
+                                    placeholder="Enter city"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    Payment Method
+                                </label>
+
+                                <select
+                                    id="paymentMethod"
+                                    class="form-select"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Payment Method
+                                    </option>
+
+                                    <option value="Cash on Delivery">
+                                        Cash on Delivery
+                                    </option>
+
+                                    <option value="Bank Transfer">
+                                        Bank Transfer
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ORDER SUMMARY -->
+                <div class="col-lg-5">
+
+                    <div class="checkout-card order-summary">
+
+                        <h3>
+                            <i class="bi bi-receipt"></i>
+                            Order Summary
+                        </h3>
+
+                        <div id="checkoutSummary">
+                        </div>
+
+
+                        <hr>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="checkoutSubtotal">
+                                Rs. 0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <strong>
+                                Rs. 300
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row total-row">
+
+                            <span>
+                                Grand Total
+                            </span>
+
+                            <strong id="checkoutTotal">
+                                Rs. 0
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-success w-100 mt-3"
+                            onclick="confirmOrder()"
+                        >
+
+                            <i class="bi bi-check-circle"></i>
+                            Confirm Order
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-outline-secondary w-100 mt-2"
+                            onclick="hideCheckout()"
+                        >
+
+                            Back to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ORDER SUCCESS -->
+        <div
+            id="orderSuccess"
+            style="display:none;"
+            class="order-success"
+        >
+
+            <div class="success-icon">
+
+                <i class="bi bi-check-circle-fill"></i>
+
+            </div>
+
+            <h2>
+                Order Confirmed!
+            </h2>
+
+            <p>
+                Your order has been successfully placed.
+            </p>
+
+            <p>
+                Order ID:
+                <strong id="orderId"></strong>
+            </p>
+
+            <a
+                href="products.html"
+                class="btn btn-dark"
+            >
+                Continue Shopping
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+
+    <div class="container-custom">
+
+
+        <div class="footer-grid">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-about">
+
+
+                <!-- FOOTER LOGO -->
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo"
+                >
+
+                    <span class="logo-icon">
+                        ⚔
+                    </span>
+
+                    <span class="logo-name">
+                        Cutlery<span>Hub</span>
+                    </span>
+
+                </a>
+
+
+
+                <p>
+
+                    A digital portal connecting cutlery
+                    products, manufacturers, machinery,
+                    training and industry resources.
+
+                </p>
+
+
+
+                <div class="social-links">
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="manufacturers.html">
+                    Manufacturers
+                </a>
+
+                <a href="machinery.html">
+                    Machinery
+                </a>
+
+
+            </div>
+
+
+
+            <!-- RESOURCES -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Resources
+                </h3>
+
+
+                <a href="manufacturing.html">
+                    Manufacturing Process
+                </a>
+
+                <a href="training2.html">
+                    Training & TEVTA
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="contact.html">
+                    Customer Inquiry
+                </a>
+
+
+            </div>
+
+
+
+            <!-- ACCOUNT -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Account
+                </h3>
+
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+                <a href="dashboards/customer-dashboard.html">
+                    Customer Dashboard
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+
+            <p>
+
+                © 2026 CutleryHub.
+                All Rights Reserved.
+
+            </p>
+
+
+        
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="assets/js/cart.js"></script>
+
+</body>
+</html>

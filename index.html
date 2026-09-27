@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CutleryHub | Wazirabad Cutlery Industry</title>
+    <style>
+        </style>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../cutlery-portal/assets/css/styling.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../cutlery-portal/assets/css/reponsive.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">⚔</span>
+
+            <span class="logo-name">
+                Cutlery<span>Hub</span>
+            </span>
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html" class="active">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    Categories
+                </a>
+            </li>
+
+            <li>
+                <a href="manufacturers.html">
+                    Manufacturers
+                </a>
+            </li>
+
+            <li>
+                <a href="machinery.html">
+                    Machinery
+                </a>
+            </li>
+
+            <li>
+                <a href="manufacturing.html">
+                    Process
+                </a>
+            </li>
+
+            <li>
+                <a href="training2.html">
+                    Training
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+
+        <!-- RIGHT NAVIGATION -->
+
+        <div class="nav-actions">
+
+
+            <!-- Search -->
+
+            <button
+                class="search-btn"
+                onclick="openSearch()"
+                aria-label="Search"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+
+
+            <!-- Login -->
+
+            <a href="login.html" class="login-btn">
+
+                Login
+
+            </a>
+
+
+
+            <!-- Register -->
+
+            <a href="register.html" class="register-btn">
+
+                Register
+
+            </a>
+
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open Menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     SEARCH OVERLAY
+===================================================== -->
+
+<div class="search-overlay" id="searchOverlay">
+
+
+    <div class="search-box">
+
+
+        <!-- Close -->
+
+        <button
+            class="close-search"
+            onclick="closeSearch()"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <h2>
+            Search CutleryHub
+        </h2>
+
+
+        <p>
+            Search products, manufacturers, machinery and more.
+        </p>
+
+
+
+        <div class="search-input">
+
+            <input
+                type="text"
+                id="globalSearch"
+                placeholder="Search here..."
+            >
+
+            <button onclick="performSearch()">
+
+                <i class="fa-solid fa-search"></i>
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+<section class="hero">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            <i class="fa-solid fa-star"></i>
+            Pakistan's Cutlery Manufacturing Hub
+        </span>
+
+        <h1>
+            Wazirabad
+            <span>Cutlery Industry</span>
+        </h1>
+
+        <p>
+            Discover quality cutlery, manufacturers,
+            machinery and the traditional craftsmanship
+            of Wazirabad — all in one platform.
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="hero-buttons">
+
+            <a href="products.html" class="primary-btn">
+                Explore Products
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="about.html" class="secondary-btn">
+                Explore Industry
+            </a>
+
+        </div>
+
+        <!-- STATISTICS -->
+        <div class="hero-stats">
+
+            <div class="stat">
+                <strong>10+</strong>
+                <span>Categories</span>
+            </div>
+
+            <div class="stat">
+                <strong>500+</strong>
+                <span>Products</span>
+            </div>
+
+            <div class="stat">
+                <strong>25+</strong>
+                <span>Manufacturers</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT IMAGE -->
+    <!-- <div class="hero-image-box">
+
+        <img
+            src="images/heroimage.jpg"
+            alt="Wazirabad Cutlery"
+            class="hero-image"
+        >
+
+    </div> -->
+
+</section>
+
+
+
+        
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="intro section-padding">
+
+
+    <div class="container-custom">
+
+
+        <div class="section-heading">
+
+
+            <span class="section-tag">
+
+                ABOUT THE INDUSTRY
+
+            </span>
+
+
+
+            <h2>
+
+                Crafting Excellence
+
+                <span>
+                    Through Generations
+                </span>
+
+            </h2>
+
+
+
+            <p>
+
+                CutleryHub is a digital platform for exploring
+                the cutlery and manufacturing industry of
+                Wazirabad. Discover products, manufacturers,
+                machinery, manufacturing processes and
+                technical training.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- INTRO CARDS -->
+
+        <div class="intro-grid">
+
+
+            <!-- Card 1 -->
+
+            <div class="intro-card">
+
+
+                <div class="icon-box">
+
+                    <i class="fa-solid fa-industry"></i>
+
+                </div>
+
+
+                <h3>
+                    Manufacturing
+                </h3>
+
+
+                <p>
+
+                    Explore the journey from raw material
+                    to finished cutlery products.
+
+                </p>
+
+
+                <a href="manufacturing-process.html">
+
+                    Learn More
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- Card 2 -->
+
+            <div class="intro-card">
+
+
+                <div class="icon-box">
+
+                    <i class="fa-solid fa-gears"></i>
+
+                </div>
+
+
+                <h3>
+                    Modern Machinery
+                </h3>
+
+
+                <p>
+
+                    Learn about cutting, forging,
+                    grinding, polishing and packaging
+                    machinery.
+
+                </p>
+
+
+                <a href="machinery.html">
+
+                    Explore Machinery
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- Card 3 -->
+
+            <div class="intro-card">
+
+
+                <div class="icon-box">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                </div>
+
+
+                <h3>
+                    Training & Skills
+                </h3>
+
+
+                <p>
+
+                    Discover technical training,
+                    workshops and skill development.
+
+                </p>
+
+
+                <a href="training.html">
+
+                    View Training
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+<section class="categories-section section-padding">
+
+    <div class="container-custom">
+
+        <div class="section-heading center">
+
+            <span class="section-tag">OUR CATEGORIES</span>
+
+            <h2>
+                Explore Our
+                <span>Cutlery Categories</span>
+            </h2>
+
+            <p>
+                Discover a wide range of cutlery categories designed
+                for kitchens, dining, serving and professional use.
+            </p>
+
+        </div>
+
+       
+<div class="container">
+    <div class="row g-4">
+
+        <!-- 01 Kitchen -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card category-card h-100">
+                <img src="../cutlery-portal/images/categories/categorey1.jpg"
+                     class="card-img-top"
+                     alt="Kitchen Cutlery">
+
+                <div class="card-body">
+                  
+                    <h3 class="card-title">Kitchen Cutlery</h3>
+                    <p class="card-text">
+                        Essential tools for everyday kitchen use.
+                    </p>
+                    <a href="products.html?category=kitchen"
+                       class="btn category-btn">
+                        Explore →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 02 Table -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card category-card h-100">
+                <img src="../cutlery-portal/images/categories/categorey2.jpg"
+                     class="card-img-top"
+                     alt="Table Cutlery">
+
+                <div class="card-body">
+                
+                    <h3 class="card-title">Table Cutlery</h3>
+                    <p class="card-text">
+                        Elegant pieces for stylish dining and table settings.
+                    </p>
+                    <a href="../cutlery-portal/products.html"
+                       class="btn category-btn">
+                        Explore →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 03 Knives -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card category-card h-100">
+                <img src="../cutlery-portal/images/categories/categorey3.jpg"
+                     class="card-img-top"
+                     alt="Knives">
+
+                <div class="card-body">
+                 
+                    <h3 class="card-title">Knives</h3>
+                    <p class="card-text">
+                        Sharp and durable knives for precise cutting.
+                    </p>
+                    <a href="products.html?category=knives"
+                       class="btn category-btn">
+                        Explore →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 04 Forks -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card category-card h-100">
+                <img src="../cutlery-portal/images/categories/categorey4.jpg"
+                     class="card-img-top"
+                     alt="Forks">
+
+                <div class="card-body">
+                    
+                    <h3 class="card-title">Forks</h3>
+                    <p class="card-text">
+                        Stylish and durable forks for everyday dining.
+                    </p>
+                    <a href="products.html?category=forks"
+                       class="btn category-btn">
+                        Explore →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 05 Spoons -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card category-card h-100">
+                <img src="../cutlery-portal/images/categories/cartegorey5.jpg"
+                     class="card-img-top"
+                     alt="Spoons">
+
+                <div class="card-body">
+                  
+                    <h3 class="card-title">Spoons</h3>
+                    <p class="card-text">
+                        Quality spoons in classic and modern designs.
+                    </p>
+                    <a href="products.html?category=spoons"
+                       class="btn category-btn">
+                        Explore →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 06 Chopsticks -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card category-card h-100">
+                <img src="../cutlery-portal/images/categories/categorey6.jpg"
+                     class="card-img-top"
+                     alt="Chopsticks">
+
+                <div class="card-body">
+                   
+                    <h3 class="card-title">Chopsticks</h3>
+                    <p class="card-text">
+                        Elegant chopsticks for modern Asian dining.
+                    </p>
+                    <a href="products.html?category=chopsticks"
+                       class="btn category-btn">
+                        Explore →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+       
+               
+
+
+
+        <!-- 08 Children -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card category-card h-100">
+                <img src="../cutlery-portal/images/categories/categorey8.jpg"
+                     class="card-img-top"
+                     alt="Children's Cutlery">
+
+                <div class="card-body">
+                 
+                    <h3 class="card-title">Children's Cutlery</h3>
+                    <p class="card-text">
+                        Safe and comfortable cutlery designed for children.
+                    </p>
+                    <a href="products.html?category=children"
+                       class="btn category-btn">
+                        Explore →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 09 Cutlery Sets -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card category-card h-100">
+                <img src="../cutlery-portal/images/categories/categorey9.jpg"
+                     class="card-img-top"
+                     alt="Cutlery Sets">
+
+                <div class="card-body">
+                  
+                    <h3 class="card-title">Cutlery Sets</h3>
+                    <p class="card-text">
+                        Complete sets for homes, hotels and restaurants.
+                    </p>
+                    <a href="products.html?category=cutlerysets"
+                       class="btn category-btn">
+                        Explore →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+      
+    </div>
+</div>
+</section>
+<!-- ========================================
+     FEATURED PRODUCTS
+======================================== -->
+<section class="featured-products section-padding">
+
+    <div class="container-custom">
+
+        <div class="section-heading center">
+            <span class="section-tag">FEATURED COLLECTION</span>
+            <h2>Our Featured <span>Products</span></h2>
+            <p>
+                Explore some of our finest cutlery products,
+                crafted with quality, precision and style.
+            </p>
+        </div>
+
+
+        <div class="featured-product-grid">
+
+            <!-- Product 1 -->
+            <div class="featured-product">
+                <div class="product-circle">
+                    <img src="../cutlery-portal/images/categories/categorey3.jpg" alt="Premium Knife">
+                </div>
+                <h3>Premium Knives</h3>
+                <p>Precision crafted kitchen knives.</p>
+            </div>
+
+
+            <!-- Product 2 -->
+            <div class="featured-product">
+                <div class="product-circle">
+                    <img src="../cutlery-portal/images/categories/cartegorey5.jpg" alt="Premium Spoon">
+                </div>
+                <h3>Elegant Spoons</h3>
+                <p>Elegant spoons for modern dining.</p>
+            </div>
+
+
+            <!-- Product 3 -->
+            <div class="featured-product">
+                <div class="product-circle">
+                    <img src="../cutlery-portal/images/categories/categorey4.jpg" alt="Premium Fork">
+                </div>
+                <h3>Classic Forks</h3>
+                <p>Durable forks with a premium finish.</p>
+            </div>
+
+
+            <!-- Product 4 -->
+            <div class="featured-product">
+                <div class="product-circle">
+                    <img src="../cutlery-portal/images/categories/categorey9.jpg" alt="Cutlery Set">
+                </div>
+                <h3>Cutlery Sets</h3>
+                <p>Complete sets for stylish dining.</p>
+            </div>
+
+
+            <!-- Product 5 -->
+            <div class="featured-product">
+                <div class="product-circle">
+                    <img src="../cutlery-portal/images/categories/categorey7.jpg" alt="Serving Cutlery">
+                </div>
+                <h3>Serving Cutlery</h3>
+                <p>Perfect tools for serving meals.</p>
+            </div>
+
+        </div>
+
+        <div class="featured-btn-box">
+            <a href="../cutlery-portal/products.html" class="primary-btn">
+                View All Products <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================
+     MATERIALS WE USE
+======================================== -->
+<section class="materials-section section-padding">
+
+    <div class="container-custom">
+
+        <div class="section-heading center">
+
+            <span class="section-tag">MATERIALS WE USE</span>
+
+            <h2>
+                Quality Materials for
+                <span>Quality Cutlery</span>
+            </h2>
+
+            <p>
+                High-quality materials are carefully selected to produce
+                durable, reliable and beautifully finished cutlery products.
+            </p>
+
+        </div>
+
+
+        <div class="materials-grid">
+
+            <!-- Material 1 -->
+            <div class="material-card">
+
+                <div class="material-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+
+                <h3>Stainless Steel</h3>
+
+                <p>
+                    Strong, durable and corrosion-resistant material
+                    widely used for high-quality cutlery.
+                </p>
+
+            </div>
+
+
+            <!-- Material 2 -->
+            <div class="material-card">
+
+                <div class="material-icon">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+
+                <h3>Carbon Steel</h3>
+
+                <p>
+                    Suitable for products that require strength,
+                    hardness and precise cutting performance.
+                </p>
+
+            </div>
+
+
+            <!-- Material 3 -->
+            <div class="material-card">
+
+                <div class="material-icon">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+
+                <h3>Brass & Metal</h3>
+
+                <p>
+                    Used for decorative details, handles and
+                    specialty cutlery designs.
+                </p>
+
+            </div>
+
+
+            <!-- Material 4 -->
+            <div class="material-card">
+
+                <div class="material-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <h3>Wood & Handles</h3>
+
+                <p>
+                    Selected wood and handle materials provide
+                    comfort, style and a traditional appearance.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="materials-button">
+
+            <a href="products.html" class="primary-btn">
+                Explore Our Products
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="manufacturing-section">
+
+   <h2>
+    <span style="color: #121212; font-size: 30px; font-weight: normal;">Manufacturing Process</span>
+</h2>
+
+<p class="subtitle">
+    <span style="color: #D4AF37; font-size: 16px;">Stainless Steel & Titanium Production Flow</span>
+</p>
+
+    <div class="steps-grid">
+
+        <div class="step-card" onclick="selectStep(1)">
+            <span class="step-num">01</span>
+            <h3>Material</h3>
+            <p>SS & Titanium</p>
+        </div>
+
+        <div class="step-card" onclick="selectStep(2)">
+            <span class="step-num">02</span>
+            <h3>Forging</h3>
+            <p>Precision Shaping</p>
+        </div>
+
+        <div class="step-card" onclick="selectStep(3)">
+            <span class="step-num">03</span>
+            <h3>Heating</h3>
+            <p>Vacuum Hardening</p>
+        </div>
+
+        <div class="step-card" onclick="selectStep(4)">
+            <span class="step-num">04</span>
+            <h3>Packing</h3>
+            <p>Quality Dispatch</p>
+        </div>
+
+    </div>
+
+    <div class="detail-display" id="processDetailBox">
+
+        <h5>Select a step above</h5>
+
+        <p>
+            Click any card to view detailed specifications.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INDUSTRY HIGHLIGHTS
+===================================================== -->
+
+<section class="highlights section-padding">
+
+
+    <div class="container-custom">
+
+
+        <div class="highlight-grid">
+
+
+            <!-- LEFT -->
+
+            <div class="highlight-content">
+
+
+                <span class="section-tag">
+
+                    WHY WAZIRABAD?
+
+                </span>
+
+
+
+                <h2>
+
+                    Where Tradition Meets
+
+                    <span>
+                        Modern Manufacturing
+                    </span>
+
+                </h2>
+
+
+
+                <p>
+
+                    The cutlery industry combines traditional
+                    craftsmanship with modern manufacturing
+                    techniques to create quality products.
+
+                </p>
+
+
+
+                <a
+                    href="about.html"
+                    class="primary-btn"
+                >
+
+                    Discover More
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- RIGHT -->
+
+            <div class="highlight-box">
+
+
+                <div class="highlight-item">
+
+                    <i class="fa-solid fa-medal"></i>
+
+                    <div>
+
+                        <h3>
+                            Quality
+                        </h3>
+
+                        <p>
+                            Focus on durable products.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="highlight-item">
+
+                    <i class="fa-solid fa-hammer"></i>
+
+                    <div>
+
+                        <h3>
+                            Craftsmanship
+                        </h3>
+
+                        <p>
+                            Skilled manufacturing expertise.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="highlight-item">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    <div>
+
+                        <h3>
+                            Global Reach
+                        </h3>
+
+                        <p>
+                            Products for wider markets.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="highlight-item">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <div>
+
+                        <h3>
+                            Innovation
+                        </h3>
+
+                        <p>
+                            Traditional skills with modern methods.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================
+     WHY CHOOSE US
+======================================== -->
+
+<section class="why-section section-padding">
+
+```
+<div class="container-custom">
+
+    <!-- Section Heading -->
+    <div class="section-heading center">
+        <span class="section-tag">WHY CHOOSE US</span>
+
+        <h2>
+            Excellence Behind Every
+            <span>Cutlery Piece</span>
+        </h2>
+
+        <p>
+            Discover the qualities that make our cutlery manufacturing
+            industry trusted for quality, craftsmanship and reliability.
+        </p>
+    </div>
+
+
+    <!-- Why Cards -->
+    <div class="why-grid">
+
+        <!-- Card 1 -->
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-award"></i>
+            </div>
+
+            <h3>Premium Quality</h3>
+
+            <p>
+                High-quality materials and careful finishing ensure
+                durable, reliable and long-lasting cutlery products.
+            </p>
+
+           
+
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-user-gear"></i>
+            </div>
+
+            <h3>Skilled Workforce</h3>
+
+            <p>
+                Experienced craftsmen and trained workers bring
+                precision, skill and traditional expertise to every product.
+            </p>
+
+           
+
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-gears"></i>
+            </div>
+
+            <h3>Modern Machinery</h3>
+
+            <p>
+                Advanced manufacturing machinery helps improve
+                production efficiency, consistency and product finishing.
+            </p>
+
+
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+
+            <h3>Export Quality</h3>
+
+            <p>
+                Carefully manufactured products are designed to meet
+                professional standards and serve international markets.
+            </p>
+
+         
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta-section">
+
+
+    <div class="container-custom">
+
+
+        <div class="cta-content">
+
+
+            <span class="section-tag">
+
+                JOIN CUTLERYHUB
+
+            </span>
+
+
+
+            <h2>
+
+                Explore the World of
+
+                <span>
+                    Cutlery Manufacturing
+                </span>
+
+            </h2>
+
+
+
+            <p>
+
+                Whether you are a customer, student,
+                teacher, worker or industry professional,
+                explore everything on one platform.
+
+            </p>
+
+
+
+            <div class="cta-buttons">
+
+
+                <a
+                    href="register.html"
+                    class="primary-btn"
+                >
+
+                    Create Account
+
+                </a>
+
+
+
+                <a
+                    href="contact.html"
+                    class="secondary-btn"
+                >
+
+                    Contact Us
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+
+    <div class="container-custom">
+
+
+        <div class="footer-grid">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-about">
+
+
+                <!-- FOOTER LOGO -->
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo"
+                >
+
+                    <span class="logo-icon">
+                        ⚔
+                    </span>
+
+                    <span class="logo-name">
+                        Cutlery<span>Hub</span>
+                    </span>
+
+                </a>
+
+
+
+                <p>
+
+                    A digital portal connecting cutlery
+                    products, manufacturers, machinery,
+                    training and industry resources.
+
+                </p>
+
+
+
+                <div class="social-links">
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="manufacturers.html">
+                    Manufacturers
+                </a>
+
+                <a href="machinery.html">
+                    Machinery
+                </a>
+
+
+            </div>
+
+
+
+            <!-- RESOURCES -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Resources
+                </h3>
+
+
+                <a href="manufacturing-process.html">
+                    Manufacturing Process
+                </a>
+
+                <a href="training.html">
+                    Training & TEVTA
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="contact.html">
+                    Customer Inquiry
+                </a>
+
+
+            </div>
+
+
+
+            <!-- ACCOUNT -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Account
+                </h3>
+
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+                <a href="dashboards/customer-dashboard.html">
+                    Customer Dashboard
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+
+            <p>
+
+                © 2026 CutleryHub.
+                All Rights Reserved.
+
+            </p>
+
+
+        
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- MAIN JAVASCRIPT -->
+
+<script src="../cutlery-portal/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
